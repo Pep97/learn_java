@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML tag - part 2</title>
+</head>
+<body>
+    <h1>TAG HTML</h1>
+    <!-- Paragraph -->
+    <p>This a Paragraph</p>
+    <!-- not orderd list -->
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+    <!-- ordered list -->
+    <ol>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ol>
+    <!-- link to website -->
+    <a href="#">Check our website</a>
+    <br>
+    <!-- image -->
+    <img src="https://via.placeholder.com/150" alt="immagine di esempio">
+    <!-- table -->
+    <table border="1">
+        <tr>
+            <th>Top 1</th>
+            <th>Top 2</th>
+        </tr>
+        <tr>
+            <td>data 1</td> <!-- table data -->
+            <td>data 2</td>
+        </tr>
+        <tr>
+            <td>data 3</td> 
+            <td>data 4</td>
+        </tr>
+        <tr>
+            <td>data 5</td>
+            <td>data 6</td>
+        </tr>
+
+    </table>
+
+    <!-- Input form -->
+
+    <form action="contacts.php" method="get"> <!-- Action -> defines where the data will go -->
+        <!-- method -> how do you want to send the info?  
+        get -> you'll get the info in the url (this will be visiable to everyone, also to who hack you sending the form through internet), normally it used to non-sensible data.
+        post -> will be packaged so that it won't be visiable online, even if someone hack the message through internet. -> with POST the way to decode the message will be harder than GET, and it will take more time to build the code to decode the message.
+    
+        -->
+        <label for="name">Name:</label> <!-- "for" -> it is used to tag the label with the input -->
+        <!-- "id" -> it used to tag the input with the label -->
+        <input type="text" id="name" name="name"><!-- "name" -> used to send the data though the method selected and be able to select it through the database -->
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required> 
+        <!-- "required" -> this force the user to fill the field, without it the user won't be able to submit the form -->
+        <br>
+        <input type="submit" value="Invia" > <!-- "value" -> it's used to change the text inside the button -->
+        
+    </form>
+
+    <!-- quote -->
+    <blockquote>
+       This is a quote.
+    </blockquote>
+    <!-- orizontal line -->
+    <hr>
+    <!-- Tag to manage definitions -->
+    <dl> <!-- stands for description list -->
+        <dt> <!-- Stands for description term -->
+            HTML
+        </dt>
+        <dd> <!-- stands for description definition -->
+            HyperText Markup Language
+        </dd>
+        <dt> 
+            CSS
+        </dt>
+        <dd> 
+            Cascading Style Sheet
+        </dd>
+    </dl>
+
+    <!-- tag audio -->
+
+    <audio controls> <!-- controls -> it used to start,stop, etc.. the audio -->
+        <source src="audio.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- make sure to check that every audio format it is supported by the browsers -->
+
+    <!-- tag video -->
+
+    <video src="" width="320" height="240" controls></video>
+
+    <video width="320" height="240" controls>
+        <source src="video.mp4" type="video">
+    </video>
+    <br>
+
+    <!-- Tag to select -->
+
+    <select name="Who_do_like_the_most?">
+        <option value="option1">Pippo</option>
+        <option value="option2">Paperino</option>
+        <option value="option3">Pluto</option>
+        <option value="option4">Paperone</option>
+    </select>
+    <br>
+
+    <!-- Radio button -->
+    <!-- you can select ONLY 1 option -->
+
+    <input type="radio" id="radio1" name="radio_group" value="option1">
+    <label for="radio1">Pippo</label>
+    <input type="radio" id="radio2" name="radio_group" value="option2">
+    <label for="radio2">Paperino</label>
+    <input type="radio" id="radio3" name="radio_group" value="option3">
+    <label for="radio3">Pluto</label>
+    <br>
+
+    <!-- checkbox -->
+    <!-- you can select multiple options -->
+
+
+    <input type="checkbox" id="checkbox1" name="checkbox_group" value="option1">
+    <label for="checkbox1">Pippo</label>
+    <input type="checkbox" id="checkbox2" name="checkbox_group" value="option2">
+    <label for="checkbox2">Paperino</label>
+    <input type="checkbox" id="checkbox2" name="checkbox_group" value="option3">
+    <label for="checkbox3">Pluto</label>
+
+    <!-- hidden input -->
+
+    <input type="hidden" id="hidden_field1" name="hidden_field" value="option1">
+
+    
+
+
+    
+
+</body>
+</html>

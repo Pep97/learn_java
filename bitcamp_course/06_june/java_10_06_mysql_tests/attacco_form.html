@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>Form vulnerabile ad injection code attack</title>
+
+  <link rel="stylesheet" href="">
+
+</head>
+<body>
+
+  <h1>Attacco su form</h1>
+  <form id="userForm">
+    <label for="username">Inserisci il tuo nome:</label>
+    <input type="text" id="username" form="username">
+    <button type="button" onclick="saluta()">Inserisci</button>
+  </form>
+
+  <div id="output"></div>
+
+
+  <script>
+    function saluta(){
+        var username = document.getElementById("username").value;
+        document.getElementById("output").innerHTML = "Ciao, " + username + "!";
+        // se scrivi <img src=x onerror="alert('Ti sto Attaccando')"> nel campo username, il codice verrà eseguito
+        // perché con innerHTML il codice viene eseguito
+
+        // per evitare questo problema si può usare textContent
+    }
+  </script>
+  
+</body>
+</html>

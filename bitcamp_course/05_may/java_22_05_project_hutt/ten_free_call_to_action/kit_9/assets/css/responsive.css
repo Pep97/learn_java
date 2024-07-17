@@ -1,0 +1,101 @@
+
+@media only screen and (min-width: 0px) and (max-width: 767px){
+    .d2c_c2a_wrapper {
+        padding: 50px 4px;
+        background-position: center center;
+        background-size: cover;
+        text-align: center;
+    }
+    h2 {
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+    p {
+        font-size: 14px;
+        margin-bottom: 20px;
+        padding-right: 0px;
+    }
+    .btn {
+        font-size: 16px;
+        padding: 10px 40px 9px;
+    }
+    img {
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .d2c_c2a_wrapper {
+        background-position: center 100%;
+    }
+    h2 {
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+    p {
+        font-size: 14px;
+        margin-bottom: 20px;
+        padding-right: 30px;
+    }
+    .btn {
+        font-size: 16px;
+        padding: 10px 40px 9px;
+    }
+    img {
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .d2c_c2a_wrapper {
+        background-position: center 100%;
+    }
+    h2 {
+        font-size: 32px;
+        margin-bottom: 14px;
+    }
+    p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .btn {
+        font-size: 18px;
+        padding: 10px 40px 9px;
+    }
+    img {
+        margin-left: -80px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+    .d2c_c2a_wrapper {
+        background-position: center 100%;
+    }
+    h2 {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+    p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .btn {
+        font-size: 20px;
+        padding: 11px 40px 10px;
+    }
+    img {
+        margin-left: -80px;
+    }
+}
+
+
+
+
+/* 
+    Template Name: {{10+ Free Website Call To Action | Bootstrap UI Kits}}
+    Template URL: {{https://designtocodes.com/product/10-free-website-call-to-action}}
+    Description: {{Are you struggling to craft CTAs that capture attention and inspire action? Check out our 10+ free website Call To Action now!}}
+    Author: DesignToCodes
+    Author URL: https://www.designtocodes.com
+    Text Domain: {{Call To Action | Bootstrap UI Kits}}
+*/

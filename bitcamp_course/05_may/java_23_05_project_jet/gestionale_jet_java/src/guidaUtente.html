@@ -1,0 +1,602 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Bascelli Mattia"> <!-- Aggiungere tutti i nomi -->
+
+    <title>Guida Utente - Javva the Hutt</title>
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="../img/logo_hutt.png" type="image/x-icon">
+
+    <!-- Font: Reddit Sans -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- Link icone -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- sezione servizi -->
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <link href="stile.css" rel="stylesheet" type="text/css">
+    <style>
+        .code {
+            font-family: Consolas;
+            text-align: left;
+            background-color: #151111;
+            color: white;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 10px;
+            width: 100%;
+        }
+
+        .code em {
+            color: darkcyan;
+        }
+        .console a  {
+            font-family: Consolas;
+            color: black;
+        }
+        .console a:hover{
+            color:white;
+            background-color:black;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light pt-3 pb-3">
+        <div class="container-xxl">
+            <!-- navbar brand / title -->
+            <a class="navbar-brand" href="#home" style="color: white;">
+                <img src="../img/logo_hutt.png" alt="logo Image" width="60" height="60" style="margin-right: 10px;">
+                JAVVA THE HUTT
+            </a>
+            <!-- toggle button for mobile nav -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- navbar links -->
+            <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html" style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="progetto.html" style="color: white;">Progetto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="guidaUtente.html" style="color: white;">Guida Utente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html" style="color: white;">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contatti.html" style="color: white;">Contatti</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="mt5 mb5 pt5 pb5">
+
+        <!-- Hero section -->
+
+        <section class="hero_section">
+            <div class="console">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 first_container">
+                            <h2>Guida Galattica per Utenti Novizi</h2>
+                            <p>In questa pagina verranno elencate le varie funzionalità del nostro programma. Ricordiamo all'utente di che per lanciare l'applicativo del programma dovrà essere installato sul proprio pc la Java Virtual Machine scaricabile dal sito della <a href="https://www.java.com/it/download/manual.jsp" target="_blank">Oracle</a></p>
+                            <a href="gestionaleJet.jar" class="btn color">Scarica Eseguibile</a>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="../img/prompt.jpg" class="img-fluid img_form" alt="Illustrazione di una dashboard con delle persone">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-10 first_container">
+                            <hr />
+                            <div class="code">
+                                <p>
+                                    Inscerisci le Credenziali d'Accesso.<br />
+                                    <br />
+                                    Inserisci Username >><em>admin</em><br />
+                                    Inserisci Password >> <em>admin1234</em><br />
+                                    Login effettuato correttamente!<br />
+                                    <br />
+                                </p>
+                            </div>
+                            <hr />
+                            <p id="menuPrincipale">Prima di poter accedere al menù bisognerà inserire login e password corretti per poter accedere. In caso contrario apparirà un messaggio d'errore.</p>
+                            <hr />
+                            <div class="code">
+                                <p>
+                                    Benvenuti nel Gestionale per Noleggio Jet di Lusso<br />
+                                    <br />
+                                    Cosa desideri fare?<br />
+                                    [1] -> Gestione Jet<br />
+                                    [2] -> Gestione Noleggi<br />
+                                    [3] -> Gestione Clienti<br />
+                                    [4] -> Esci<br />
+                                    Scegli >><br />
+                                </p>
+                            </div>
+                            <hr />
+                            <p id="menuJet">
+                                Una volta effettuato il login vi apparirà il menù principale per accedere ai sottomenù.<br />
+                                <a href="#menuPrincipale">Menù Principale</a> - <a href="#menuJet">Menù Jet</a> - <a href="#menuNoleggio">Menù Noleggio</a> - <a href="#menuCliente">Menù Cliente</a>
+                            </p>
+                            <hr />
+                            <div class="code">
+                                <p>
+                                    Cosa vuoi fare?<br />
+                                    [1] -> Visualizza i Jet:<br />
+                                    [2] -> Inserisci un nuovo Jet:<br />
+                                    [3] -> Rimuovi un Jet:<br />
+                                    [4] -> Esci.<br />
+                                    Scegli >><em>1</em><br />
+                                    <br />
+
+                                    Ecco i nostri Jet:<br />
+                                    1) Boba Jett | prezzo: 10000.0 | posti: 10 | Jet presenti nell'Hangar: 3<br />
+                                    2) JetHro Tull | prezzo: 25000.0 | posti: 22 | Jet presenti nell'Hangar: 1<br />
+                                    3) JetTa The Hutt | prezzo: 8000.0 | posti: 6 | Jet presenti nell'Hangar: 5<br />
+                                    4) Darth Jetter | prezzo: 4000.0 | posti: 3 | Jet presenti nell'Hangar: 8<br />
+                                </p>
+                            </div>
+
+                            <hr />
+                            <p>Entrando nel menù Jet e digitando <strong>1</strong> l'utente potrà visualizzare tutti Jet nel proprio Hangar.</p>
+                            <hr />
+                            <div class="code">
+                                <p>
+                                    Cosa vuoi fare?<br />
+                                    [1] -> Visualizza i Jet:<br />
+                                    [2] -> Inserisci un nuovo Jet:<br />
+                                    [3] -> Rimuovi un Jet:<br />
+                                    [4] -> Esci.<br />
+                                    Scegli >><em>2</em><br />
+                                    <br />
+
+                                    Inserisci il nome del Jet da aggiungere >> <em>Kylo Jet</em><br />
+                                    <br />
+                                    Inserisci il prezzo >> <em>7500</em><br />
+                                    <br />
+                                    Qual è il numero di passeggeri massimo trasportabile dal Jet? >> <em>14</em><br />
+                                    <br />
+                                    Quanti di questi Jet vuoi aggiungere? >> <em>3</em><br />
+                                    <br />
+                                    Jet aggiunto con successo!<br />
+                                </p>
+                            </div>
+                            <hr />
+                            <p>Digitando <strong>2</strong> l'utente Potrà inserire un nuovo tipo di Jet all'interno del proprio Hangar. </p>
+                            <hr />
+                            <div class="code">
+                                <p>
+                                    Cosa vuoi fare?<br />
+                                    [1] -> Visualizza i Jet:<br />
+                                    [2] -> Inserisci un nuovo Jet:<br />
+                                    [3] -> Rimuovi un Jet:<br />
+                                    [4] -> Esci.<br />
+                                    Scegli >><em>3</em>
+                                    <br />
+                                    <br />
+                                    Ecco la lista dei nostri Jet:<br />
+                                    1) Boba Jett | prezzo: 10000.0 | posti: 10 | Jet presenti nell'Hangar: 3<br />
+                                    2) JetHro Tull | prezzo: 25000.0 | posti: 22 | Jet presenti nell'Hangar: 1<br />
+                                    3) JetTa The Hutt | prezzo: 8000.0 | posti: 6 | Jet presenti nell'Hangar: 5<br />
+                                    4) Darth Jetter | prezzo: 4000.0 | posti: 3 | Jet presenti nell'Hangar: 8<br />
+                                    <br />
+                                    Inserisci il numero del Jet da rimuovere >> <em>2</em><br />
+                                    Jet rimosso con successo!<br />
+                                </p>
+                            </div>
+                            <hr />
+                            <p>Digitando <strong>3</strong> l'utente potrà eliminare un Jet dal proprio Hangar semplicemente digitanto il numero di riferimento. Una volta fatto vi basterà visualizzare i Jet per notare che il jet eliminato non sarà più presente in lista.</p>
+                            <hr />
+                            <div class="code">
+                                <p>
+                                    Cosa vuoi fare?<br />
+                                    [1] -> Visualizza i Jet:<br />
+                                    [2] -> Inserisci un nuovo Jet:<br />
+                                    [3] -> Rimuovi un Jet:<br />
+                                    [4] -> Esci.<br />
+                                    Scegli >>4<br />
+                                    <br />
+                                    Ritorno al menù principale.<br />
+                                    <br />
+                                    Cosa desideri fare?<br />
+                                    [1] -> Gestione Jet<br />
+                                    [2] -> Gestione Noleggi<br />
+                                    [3] -> Gestione Clienti<br />
+                                    [4] -> Esci<br />
+                                    Scegli >><br />
+                                </p>
+                            </div>
+                            <hr />
+                            <p id="menuNoleggio">
+                                Digitando <strong>4</strong> l'utente tornerà al menù principale.<br />
+                                <a href="#menuPrincipale">Menù Principale</a> - <a href="#menuJet">Menù Jet</a> - <a href="#menuNoleggio">Menù Noleggio</a> - <a href="#menuCliente">Menù Cliente</a>
+                            </p>
+                            <hr />
+                            <div class="code">
+                                <p>
+                                    Cosa desideri fare?<br />
+                                    [1] -> Gestione Jet<br />
+                                    [2] -> Gestione Noleggi<br />
+                                    [3] -> Gestione Clienti<br />
+                                    [4] -> Visualizza Storico Noleggi:<br />
+                                    [5] -> Esci.<br />
+                                    Scegli >><em>2</em><br />
+                                    <br />
+                                    Cosa vuoi fare?<br />
+                                    [1] -> Inserisci Nuovo Noleggio:<br />
+                                    [2] -> Rimuovi Noleggio:<br />
+                                    [3] -> Visualizza Noleggi:<br />
+                                    [4] -> Esci.<br />
+                                    Scegli >><em>1</em><br />
+                                    <br />
+
+                                </p>
+                            </div>
+                            <hr />
+                            <p>Digitando <strong>3</strong> si accederà al menù del noleggio.</p>
+                            <hr />
+                            <div class="code">
+                                <p>
+                                    Cosa vuoi fare?<br />
+                                    [1] -> Inserisci Nuovo Noleggio:<br />
+                                    [2] -> Rimuovi Noleggio:<br />
+                                    [3] -> Visualizza Noleggi:<br />
+                                    [4] -> Visualizza Storico Noleggi:<br />
+                                    [5] -> Esci.<br />
+                                    Scegli >><em>1</em><br />
+                                    <br />
+
+                                    1) Darth Jetter | prezzo: 4000.0 | posti: 3 | Jet presenti nell'Hangar: 8<br />
+                                    2) JetTa The Hutt | prezzo: 8000.0 | posti: 6 | Jet presenti nell'Hangar: 5<br />
+                                    3) Boba Jett | prezzo: 10000.0 | posti: 10 | Jet presenti nell'Hangar: 3<br />
+                                    4) JetHro Tull | prezzo: 25000.0 | posti: 22 | Jet presenti nell'Hangar: 1<br />
+                                    Ecco i nostri Jet!<br />
+                                    Inserisci il numero del Jet da noleggiare >> <em>3</em><br />
+                                    <br />
+                                    Inserisci il nome del Cliente >> <em>Jhonny Bravo</em><br />
+                                    <br />
+                                    Inserisci l'email del Cliente >> <em>bravojhonny@tiscali.it</em><br />
+                                    <br />
+                                    Inserisci la data di inizio del noleggio (esempio: 2024/01/10) >> <em>2024/09/10</em><br />
+                                    <br />
+                                    Inserisci la data di fine del noleggio (esempio: 2024/01/15) >> <em>2024/09/15</em><br />
+                                    <br />
+                                    Vuoi inserire dei servizi aggiuntivi? (si/no) >> <em>si</em><br />
+                                    <br />
+                                    Ecco i nostri servizi aggiuntivi:<br />
+                                    Servizio: Wi-Fi | Costo: 40.0€<br />
+                                    Servizio: Pasto Stellato | Costo: 300.0€<br />
+                                    Servizio: Bar | Costo: 200.0€<br />
+                                    <br />
+                                    Inserisci il nome del servizio da aggiungere >> <em>wi-fi</em><br />
+                                    <br />
+                                    Servizio aggiunto con successo!<br />
+                                    <br />
+                                    Vuoi inserire dei servizi aggiuntivi? (si/no) >> <em>no</em><br />
+                                    <br />
+                                    Inserisci il numero di passeggeri che salirà a bordo >> <em>7</em><br />
+                                    Noleggio inserito con successo!<br />
+
+                                    1) Johnny Bravo | email: bravojohnny@tiscali.it | Jet: Boba Jett | data inizio: Tue Sep 10 00:00:00 CEST 2024 | data fine: Sun Sep 15 00:00:00 CEST 2024 | Servizi: Wi-Fi | Passeggeri: 7 | Il personale necessario per questo volo sarà composto da 1 Pilota e 2 Assistenti di Bordo
+
+                                </p>
+                            </div>
+                            <hr />
+                            <p>Digitando <strong>1</strong> Si potrà inserire un nuovo noleggio come da esempio.</p>
+                            <hr />       
+                            <div class="code">
+                                <p>
+                                    Cosa vuoi fare?<br />
+                                    [1] -> Inserisci Nuovo Noleggio:<br />
+                                    [2] -> Rimuovi Noleggio:<br />
+                                    [3] -> Visualizza Noleggi:<br />
+                                    [4] -> Visualizza Storico Noleggi:<br />
+                                    [5] -> Esci.<br />
+                                    Scegli >><em>2</em><br />
+                                    <br />
+                                </p>
+
+                            </div>
+                            <hr />
+                            <p>Digitando <strong>2</strong> nel sottomenù dedicato ai noleggi potremmo rimuovere uno dei noleggi elencati, ci basterà inserire il numero di riferimento.</p>
+                            <hr />
+                            <div class="code">
+                                <p>
+                                    Cosa vuoi fare?<br />
+                                    [1] -> Inserisci Nuovo Noleggio:<br />
+                                    [2] -> Rimuovi Noleggio:<br />
+                                    [3] -> Visualizza Noleggi:<br />
+                                    [4] -> Visualizza Storico Noleggi:<br />
+                                    [5] -> Esci.<br />
+                                    Scegli >><em>3</em><br />
+                                    <br />
+                                </p>
+
+                            </div>
+                            <hr />
+                            <p>Digitando <strong>3</strong> votremo visualizzare i Noleggi attualmente attivi.</p>
+                            <hr />
+                            <div class="code">
+                                <p>
+                                    Cosa vuoi fare?<br />
+                                    [1] -> Inserisci Nuovo Noleggio:<br />
+                                    [2] -> Rimuovi Noleggio:<br />
+                                    [3] -> Visualizza Noleggi:<br />
+                                    [4] -> Visualizza Storico Noleggi:<br />
+                                    [5] -> Esci.<br />
+                                    Scegli >><em>4</em><br />
+                                    <br />
+                                </p>
+                                </p>
+                            </div>
+                            <hr />
+                            <p id="menuCliente">
+                                Digitando <strong>4</strong> si tornerà al menù principale<br />
+                                <a href="#menuPrincipale">Menù Principale</a> - <a href="#menuJet">Menù Jet</a> - <a href="#menuNoleggio">Menù Noleggio</a> - <a href="#menuCliente">Menù Cliente</a>
+                            </p>
+                        </div>
+                        <div class="code">
+                            <p>
+                                Cosa desideri fare?<br />
+                                [1] -> Gestione Jet<br />
+                                [2] -> Gestione Noleggi<br />
+                                [3] -> Gestione Clienti<br />
+                                [4] -> Esci<br />
+                                Scegli >><em>3</em><br />
+                                <br />
+                                Cosa vuoi fare?<br />
+                                [1] -> Visualizza Cliente:<br />
+                                [2] -> Ricerca Noleggi per Cliente:<br />
+                                [3] -> Visualizza Storico Noleggi:<br />
+                                [4] -> Aggiungi un Cliente:<br />
+                                [5] -> Esci:<br />
+                                Scegli >><br />
+                            </p>
+
+                        </div>
+                        <hr />
+                        <p>Digitando <strong>3</strong> entreremo a gamba tesa nel menù dedicato ai clienti.</p>
+                        <hr />
+                        <div class="code">
+                            <p>
+                                Cosa vuoi fare?<br />
+                                [1] -> Visualizza Cliente:<br />
+                                [2] -> Ricerca Noleggi per Cliente:<br />
+                                [3] -> Aggiungi un Cliente:<br />
+                                [4] -> Esci:<br />
+                                Scegli >><em>1</em><br />
+                                <br />
+                                Ecco i nostri Clienti!<br />
+                                <br />
+                                1) Jhonny Bravo | email: bravojhonny@tiscali.it<br />
+                                2) Mario Rossi | email: mariorossi22@gmail.com<br />
+                            </p>
+
+                        </div>
+                        <hr />
+                        <p>Digitando <strong>1</strong> nel sottomenù dedicato ai clienti visualizzeremo la nostra lista clienti.</p>
+                        <hr />
+                        <div class="code">
+                            <p>
+                                Cosa vuoi fare?<br />
+                                [1] -> Visualizza Cliente:<br />
+                                [2] -> Ricerca Noleggi per Cliente:<br />
+                                [3] -> Aggiungi un Cliente:<br />
+                                [4] -> Esci:<br />
+                                Scegli >><em>2</em><br />
+                            </p>
+
+                        </div>
+                        <hr />
+                        <p>Digitando <strong>2</strong> nel sottomenù stamperemo la lista dei noleggi di un cliente.</p>
+                        <hr />
+                        <div class="code">
+                            <p>
+                                Cosa vuoi fare?<br />
+                                [1] -> Visualizza Cliente:<br />
+                                [2] -> Ricerca Noleggi per Cliente:<br />
+                                [3] -> Aggiungi un Cliente:<br />
+                                [4] -> Esci:<br />
+                                Scegli >><em>2</em><br />
+                            </p><br />
+                            <br />
+                            Franco Neri | email: franconeri@gmail.com | Jet: Darth Jetter | data inizio: Sat Jun 22 2024 | data fine: Tue Jun 25 2024 | Servizi: Nessun servizio selezionato | Passeggeri: 2 | Il personale necessario per questo volo sarà composto da 1 Pilota e 2 Assistenti di Bordo<br />
+                            Franco Neri | email: franconeri@gmail.com | Jet: JetHro Tull | data inizio: Sun May 26 2024 | data fine: Tue May 28 2024 | Servizi: Nessun servizio selezionato | Passeggeri: 16 | Il personale necessario per questo volo sarà composto da 2 Piloti e 4 Assistenti di Bordo<br />
+                            <br />
+                        </div>
+                        <hr />
+                        <p>Digitando <strong>2</strong> nel sottomenù dedicato ai clienti visualizzeremo lo storico dei noleggi</p>
+                        <hr />
+                        <div class="code">
+                            <p>
+                                Cosa vuoi fare?<br />
+                                [1] -> Visualizza Cliente:<br />
+                                [2] -> Ricerca Noleggi per Cliente:<br />
+                                [3] -> Aggiungi un Cliente:<br />
+                                [4] -> Esci:<br />
+                                Scegli >><em>1</em><br />
+                            </p>
+
+                        </div>
+                        <hr />
+                        <p>Digitando <strong>3</strong> nel sottomenù dedicato ai clienti inseriremo un nuovo cliente.</p>
+                        <hr />
+                        <div class="code">
+                            <p>
+                                Cosa vuoi fare?<br />
+                                [1] -> Visualizza Cliente:<br />
+                                [2] -> Ricerca Noleggi per Cliente:<br />
+                                [3] -> Aggiungi un Cliente:<br />
+                                [4] -> Esci:<br />
+                                Scegli >><em>4</em><br />
+                            </p>
+
+                        </div>
+                        <hr />
+                        <p>
+                            Digitando <strong>5</strong> nel sottomenù dedicato ai clienti l'utente tornerà al menù principale.<br />
+                            <a href="#menuPrincipale">Menù Principale</a> - <a href="#menuJet">Menù Jet</a> - <a href="#menuNoleggio">Menù Noleggio</a> - <a href="#menuCliente">Menù Cliente</a>
+                        </p>
+                        <hr />
+                    </div>
+                </div>
+            </div>
+
+</section>
+
+    </main>
+
+
+    <footer class="text-center text-lg-start text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            <img src="../img/logo_hutt.png" alt="logo Image" width="60" height="60" style="margin-right: 10px;">
+                            Java the Hutt
+                        </h6>
+                        <p>
+                            Siamo il team di Bitcamp formato da L. Tassiello, M. Bascelli, G. Boinega, V. Barone, G. De Marzo, R. Bucco.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Pagine</h6>
+                        <p>
+                            <a class="text-white" href="../index.html">Home</a>
+                        </p>
+                        <p>
+                            <a class="text-white" href="progetto.html">Progetto</a>
+                        </p>
+                        <p>
+                            <a class="text-white" href="guidaUtente.html">Guida Utente</a>
+                        </p>
+                        <p>
+                            <a class="text-white" href="portfolio.html">Portfolio</a>
+                        </p>
+                        <p>
+                            <a class="text-white" href="contatti.html">Contatti</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            Link Utili
+                        </h6>
+                        <p>
+                            <a class="text-white" href="#">Disclaimer Prodotto</a>
+                        </p>
+                        <p>
+                            <a class="text-white" href="#">Informazioni Legali</a>
+                        </p>
+
+                    </div>
+
+                    <!-- Grid column -->
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                        <p><i class="fas fa-home mr-3"></i> Firenze, Via Marco Polo 12, IT</p>
+                        <p><i class="fas fa-envelope mr-3"></i> javathehutt@gmail.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> + 39 234 567 88</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="my-3">
+
+            <!-- Section: Copyright -->
+            <section class="p-3 pt-0">
+                <div class="row d-flex align-items-center">
+                    <!-- Grid column -->
+                    <div class="col-md-7 col-lg-8 text-center text-md-start">
+                        <!-- Copyright -->
+                        <div class="p-3">
+                            © 2024 Copyright: Java the Hutt
+                        </div>
+                        <!-- Copyright -->
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                        <!-- Facebook -->
+                        <a class="btn btn-outline-light btn-floating m-1"
+                           class="text-white"
+                           role="button">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <!-- Twitter -->
+                        <a class="btn btn-outline-light btn-floating m-1"
+                           class="text-white"
+                           role="button">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a class="btn btn-outline-light btn-floating m-1"
+                           class="text-white"
+                           role="button">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+
+            </section>
+            <!-- Section: Copyright -->
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

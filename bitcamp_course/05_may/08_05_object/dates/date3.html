@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>Difference between two dates</title>
+
+  <link rel="stylesheet" href="">
+
+</head>
+<body>
+
+    <h1>Calcolo della differenza tra due date</h1>
+
+    <p>Data di inizio: <input type="date" id="data-inizio"></p>
+    <p>Data di fine: <input type="date" id="data-fine"></p>
+    <button onclick="calcolaDifferenza()">Calcola Differenza in giorni</button>
+    <p id="risultato"></p>
+
+  <script>
+
+    function calcolaDifferenza(){
+
+        // prendiamo i valori inseriti dall'utente
+
+        var dataInizio = new Date(document.getElementById("data-inizio").value);
+        var dataFine = new Date(document.getElementById("data-fine").value);
+
+        // calcoliamo la differenza tra le due date
+
+        var differenzaMill = Math.abs(dataFine - dataInizio);
+        // Math.abs() -> toglie il valore assoluto negativo e ritorna il valore positivo intero
+
+        // conversione da millisecondi a giorni
+
+        var differenzaGiorni = Math.floor(differenzaMill / (1000 * 60 * 60 * 24));
+        // Math.ceil() -> arrotonda per eccesso
+        // Math.floor() -> arrotonda per difetto
+
+        // stampiamo il risultato
+
+        document.getElementById("risultato").innerHTML = "La differenza tra le due date é di " + differenzaGiorni + " giorni";
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,744 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: linear-gradient(45deg, rgba(165, 162, 162, 0.7), rgba(165, 162, 162, 0.7)), url(img/immagine_form_iscrizione.jpg);
+    background-attachment: fixed; /* This makes the background image stay still while scrolling */
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-family: "Carrois Gothic SC", sans-serif;
+}
+
+.carrois-gothic-sc-regular {
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*HEADER*/
+header {
+    display: flex;
+    align-items:center;
+    background-color: rgba(13,12,12,1);
+    color: rgba(229,229,229,1);
+    height:14vh;
+    width:100%;
+    font-size:18px;
+}
+
+header img{
+    width:70%;
+}
+
+#logoleft{
+    flex-basis:11%;
+}
+
+
+#header_right{
+    flex-basis:100%;
+}
+
+#associazione{
+    flex-basis:20%;
+}
+
+    #associazione a {
+        text-decoration: none;
+        color: rgba(229,229,229,1);
+        text-align:left;
+    }
+
+
+nav {
+    border-radius: 8px;
+    font-weight: bold;
+    
+}
+
+    nav a {
+        color: rgba(229,229,229,1);
+        text-decoration: none;
+        margin:2%;
+    }
+
+        nav a:hover {
+            background-color: rgba(221,32,32,0.8);
+            border-radius: 20px;
+            padding:1.5%;
+        }
+
+
+
+/*Container dei div di slider e tabelle*/
+
+.cnt {
+    display: flex;
+    width: 100%;
+    margin-top:1%;
+}
+
+
+
+/*Animazione slider*/
+
+.slider{
+}
+
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    animation: 0.4s 0.2s both fadeIn;
+    aspect-ratio: 16/9;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin-left: 2%;
+    margin-top: 1%;
+    box-shadow: inset 0 0 15px rgba(13,12,12,0.5);
+    flex-basis: 50%;
+    border: 3px solid rgb(214, 115, 115);
+}
+
+
+.subtitle {
+    background-color: rgba(214, 115, 115, 0.95);
+    color: rgb(229,229,229);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    animation: 12s linear infinite sliderAnimation;
+    box-sizing: border-box;
+    display: flex;
+}
+
+    .slide:first-of-type {
+        background: no-repeat  center/cover url('img/konamiCode.jpg');
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .slide:nth-of-type(2) {
+        background: no-repeat center/cover url('img/fallout.jpg');
+        animation-delay: -9s;
+    }
+
+    .slide:nth-of-type(3) {
+        background: no-repeat center/cover url('img/counter2.png');
+        animation-delay: -6s;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .slide:nth-of-type(4) {
+        background: no-repeat center/cover url('img/perfectBlue.jpg');
+        animation-delay: -3s;
+        justify-content: center;
+        align-items: center;
+    }
+
+@keyframes sliderAnimation {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    20% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    25% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+    70% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    71% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    95% {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+}
+
+
+/*Tabelle tornei*/
+
+.tornei_hm {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 44%;
+    margin: 1% auto 1% 3%;
+}
+
+.torneo_home ul {
+    background: #fff; /*colore tabella*/
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+    .torneo_home ul li {
+        display:flex;
+        background: rgba(13,12,12,0.1);
+        padding: 10px 20px;
+        color: #0d0c0c;
+        margin-top: 1%;
+        transition: 0.5s;
+    }
+
+    #titolo_li, #titolo_li2, #id_li, #data_li{
+        font-weight:bold;
+    }
+
+        .torneo_home ul li:nth-child(2) {
+            background: rgba(221,32,32,0.6);
+        }
+
+        .torneo_home ul li:nth-child(3) {
+            background: rgba(221,32,32,0.4);
+        }
+
+        .torneo_home ul li:nth-child(4) {
+            background: rgba(221,32,32,0.2);
+        }
+
+        .torneo_home ul li span:nth-child(1) {
+            width: 50%;
+        }
+
+        .torneo_home ul li span:nth-child(2) {
+            width: 50%;
+        }
+
+
+        .torneo_home ul li:hover {
+            transform: scale(1.06);
+            background: rgba(221,32,32);
+            color: #fff;
+            cursor: default;
+        }
+
+
+
+/*Slider mercatino*/
+#titleshop {
+    display: flex;
+    padding: 10px;
+    background-color: rgb(214, 115, 115);
+    border-radius: 5rem;
+    text-align: center;
+    box-shadow: inset 0 0 15px rgba(13,12,12,0.5);
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    width: 40%;
+    text-align: center;
+    margin: 5% auto;
+}
+
+
+.mercatino h2 {
+    text-align: center;
+    margin-top: 5%;
+    color: rgb(229,229,229);
+}
+
+.mercatino a{
+    text-decoration:none;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    border: 3px solid rgb(214, 115, 115);
+    border-radius: 15px;
+    box-shadow: inset 0 0 15px rgba(13,12,12,0.5);
+    margin-bottom:5%;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+    .slider img {
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+    }
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+    .slider-nav a {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color: rgba(165,162,162,0.6);
+        transition: background-color ease 250ms;
+    }
+
+        .slider-nav a:hover {
+            background-color: rgba(221,32,32, 0.9);
+            border: 0.5px solid #0d0c0c;
+        }
+
+
+        /*Reviews animation*/
+
+
+#back_rev {
+    display: flex;
+    padding: 10px;
+    margin-right: 10px;
+    /*Da qui cancellare per tornare come all'inizio*/
+    background-color: rgb(214, 115, 115);
+    border-radius: 5rem;
+    text-align: center;
+    box-shadow: inset 0 0 15px rgba(13,12,12,0.5);
+    align-items: center;
+    justify-content: center;
+    width: 86%;
+    text-align: center;
+    margin: 0 auto 4%;
+}
+
+
+#text_car h2 {
+    font-size: 40px;
+    text-align: center;
+    color: rgb(229,229,229);
+}
+
+.content-slider {
+    width: 100%;
+    height: 360px;
+}
+
+.slider2 {
+    height: 320px;
+    width: 680px;
+    margin: 40px auto 0;
+    overflow: visible;
+    position: relative;
+}
+
+.mask {
+    overflow: hidden;
+    height: 320px;
+}
+
+.slider2 ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.slider2 li {
+    width: 680px;
+    height: 320px;
+    position: absolute;
+    top: -325px;
+    list-style: none;
+}
+
+.slider2 .quote {
+    font-size: 20px;
+    text-align: center;
+}
+
+.slider2 .source {
+    font-size: 10px;
+    text-align: right;
+}
+
+.slider2 li.anim1 {
+    animation: cycle 15s linear infinite;
+}
+
+.slider2 li.anim2 {
+    animation: cycle2 15s linear infinite;
+}
+
+.slider2 li.anim3 {
+    animation: cycle3 15s linear infinite;
+}
+
+.slider2 li.anim4 {
+    animation: cycle4 15s linear infinite;
+}
+
+.slider2 li.anim5 {
+    animation: cycle5 15s linear infinite;
+}
+
+.slider2:hover li {
+    animation-play-state: paused;
+}
+
+@keyframes cycle {
+    0% {
+        top: 0px;
+    }
+
+    4% {
+        top: 0px;
+    }
+
+    16% {
+        top: 0px;
+        opacity: 1;
+        z-index: 0;
+    }
+
+    20% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+
+    21% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    50% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    92% {
+        top: -325px;
+        opacity: 0;
+        z-index: 0;
+    }
+
+    96% {
+        top: -325px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes cycle2 {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+
+    16% {
+        top: -325px;
+        opacity: 0;
+    }
+
+    20% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    24% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    36% {
+        top: 0px;
+        opacity: 1;
+        z-index: 0;
+    }
+
+    40% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+
+    41% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    100% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes cycle3 {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+
+    36% {
+        top: -325px;
+        opacity: 0;
+    }
+
+    40% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    44% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    56% {
+        top: 0px;
+        opacity: 1;
+        z-index: 0;
+    }
+
+    60% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+
+    61% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    100% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes cycle4 {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+
+    56% {
+        top: -325px;
+        opacity: 0;
+    }
+
+    60% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    64% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    76% {
+        top: 0px;
+        opacity: 1;
+        z-index: 0;
+    }
+
+    80% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+
+    81% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    100% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes cycle5 {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+
+    76% {
+        top: -325px;
+        opacity: 0;
+    }
+
+    80% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    84% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    96% {
+        top: 0px;
+        opacity: 1;
+        z-index: 0;
+    }
+
+    100% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+
+footer {
+    background: rgba(13,12,12);
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+.icone img {
+    width: 40px;
+    height: 40px;
+}
+
+.chiSiamo {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+    .chiSiamo a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+@media screen and (max-width: 768px) {
+    .footer {
+        width: 90%;
+    }
+
+    .icone {
+        height: 100%;
+    }
+
+
+
+    @media screen and (max-width: 760px) {
+
+        .cnt {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 90%
+        }
+
+        .slider-container {
+            margin: 0;
+            width: 98%;
+        }
+
+
+        .tornei_hm {
+            margin-left: auto;
+        }
+    }
+
+    /*   @media screen and (max-width: 1150px) {
+   #back_rev {
+        width:80%;
+    }
+
+    .quote{
+        display:flex;
+        width:80%;
+ 
+    }
+*/
+
+
+    /* Media query per schermi di dimensioni inferiori */
+    @media only screen and (max-width: 1100px) {
+        #back_rev {
+            width: 95%;
+        }
+
+        #text_car h2 {
+            font-size: 30px;
+        }
+
+        .slider2 {
+            width: 90%;
+            max-width: 85%;
+        }
+
+            .slider2 li {
+                width: 90%;
+                max-width: 85%;
+            }
+
+            .slider2 .quote {
+                font-size: 18px;
+            }
+
+            .slider2 .source {
+                font-size: 12px;
+            }
+    }
+
+

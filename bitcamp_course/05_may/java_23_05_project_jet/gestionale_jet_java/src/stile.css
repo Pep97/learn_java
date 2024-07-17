@@ -1,0 +1,279 @@
+﻿:root {
+    font-size: 18px;
+    --light-green: #7584c8;
+    --dark-green: #2b3d91;
+    --light-blue: #68c5ee;
+    --dark-blue: #29aae3;
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Reddit Sans', 'sans-serif';
+    background-color: var(--dark-blue);
+}
+
+/* navabar */
+
+nav {
+    /*max-width: 90%;*/
+    margin: 0 auto;
+    background-color: var(--dark-blue);
+    .nav-link:hover {
+        text-decoration: underline;
+    }
+    a{
+        color: white;
+    
+    }
+}
+
+    
+/* Hero section */
+
+.hero_section{
+
+    font-size: 15px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color: #F9F9F9;
+
+    h2{
+        font-family: 'sans-serif';
+        font-size: 50px;
+    }
+  
+    .color{
+      font-family: 'sans-serif';
+      color: white;
+      background-color: var(--dark-green);
+      font-size: 15px;
+      font-weight: bold; /* font-style should be font-weight for bold */
+      font-family: Arial, sans-serif; /* font-family should be a font name, 600 is not a valid font name */
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    .color:hover{
+      background-color: var(--light-green);
+    }
+  
+    .img_form{
+      width: 100%;
+      height: 100%;
+  
+    }
+    p{
+      font-size: 20px;
+    }
+  
+    
+  
+    @media screen and (max-width: 768px) {
+      .first_container {
+        margin-bottom: 40px;
+      }
+  
+      h2{
+        margin-bottom: 30px;
+        font-size: 40px;
+      }    
+      
+    }
+  }
+
+/* Sezione funzionatalitá */
+
+.funzionalita{
+    background-color: #F4FBFE;
+    min-width: 100%;
+    min-height: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    h2{
+        font-family: 'sans-serif';
+        font-size: 50px;
+    }
+
+    .card::after {
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        left: 20px;
+        width: calc(100% - 40px);
+        height: 35px;
+        background-color: #fff;
+        -webkit-box-shadow: 0 19px 28px 5px rgba(64,64,64,0.09);
+        box-shadow: 0 19px 28px 5px rgba(64,64,64,0.09);
+        content: '';
+        z-index: -1;
+    }
+    a.card {
+        text-decoration: none;
+    }
+    
+    .card {
+        position: relative;
+        border: 0;
+        border-radius: 0;
+        background-color: #fff;
+        -webkit-box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09);
+        box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09);
+    }
+    .card {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,0.125);
+        border-radius: .25rem;
+    }
+    .card_funzionalita{
+        margin-top: 40px;
+    }
+    
+    .box-shadow {
+        -webkit-box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09) !important;
+        box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09) !important;
+    }
+    
+    .ml-auto, .mx-auto {
+        margin-left: auto !important;
+    }
+    .mr-auto, .mx-auto {
+        margin-right: auto !important;
+    }
+    .rounded-circle {
+        border-radius: 50% !important;
+    }
+    .bg-white {
+        background-color: #fff !important;
+    }
+    
+    .ml-auto, .mx-auto {
+        margin-left: auto !important;
+    }
+    
+    .mr-auto, .mx-auto {
+        margin-right: auto !important;
+    }
+    .d-block {
+        display: block !important;
+    }
+    img, figure {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+    }
+    
+    .card-text {
+        padding-top: 12px;
+        color: #8c8c8c;
+    }
+    
+    .text-sm {
+        font-size: 12px !important;
+    }
+    p, .p {
+        margin: 0 0 16px;
+    }
+    
+    .card-title {
+        margin: 0;
+        font-family: "Montserrat",sans-serif;
+        font-size: 18px;
+        font-weight: 900;
+    }
+    
+    .pt-1, .py-1 {
+        padding-top: .25rem !important;
+    }
+    
+    .head-icon{
+        margin-top:18px;
+        color:var(--dark-green)
+    }
+  
+    .nostri_servizi_testo{
+      font-size: 25px;
+    }
+  
+    .card-text{
+      font-size: 16px;
+    }
+  
+    @media screen and (max-width: 992px){
+      .card::after {
+        display: none;
+      }
+      
+    }
+  
+}
+
+/* Sezione call to action */
+
+.call_to_action{
+
+    font-size: 15px;
+    padding-bottom: 10px;
+    background-color: #F9F9F9;
+
+    h2{
+        font-family: 'sans-serif';
+        font-size: 50px;
+    }
+  
+    .color{
+        color: white;
+      font-family: 'sans-serif';
+      background-color: var(--dark-green);
+      font-size: 15px;
+      font-weight: bold; /* font-style should be font-weight for bold */
+      font-family: Arial, sans-serif; /* font-family should be a font name, 600 is not a valid font name */
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    .color:hover{
+      background-color: var(--light-green);
+    }
+  
+    .img_form{
+      width: 150%;
+      height: 150%;
+      
+  
+    }
+    p{
+      font-size: 20px;
+    }
+  
+    
+  
+    @media screen and (max-width: 768px) {
+      .first_container {
+        margin-bottom: 40px;
+      }
+  
+      h2{
+        margin-bottom: 30px;
+        font-size: 40px;
+      }    
+      
+    }
+  }
+
+/* Footer */
+.footer {
+    background-color: var(--dark-blue);
+}
+
+

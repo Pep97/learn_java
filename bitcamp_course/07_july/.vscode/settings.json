@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\librerie_java\\jsoup-1.15.4.jar",
+        "c:\\librerie_java\\mysql-connector-j-8.2.0.jar",
+        "c:\\librerie_java\\swing-layout-1.0.2.jar",
+        "c:\\librerie_java\\awt-13.0.jar"
+    ]
+}

@@ -1,0 +1,35 @@
+CREATE DATABASE IF NOT EXISTS scuolabit;
+USE scuolabit;
+
+CREATE TABLE studenti(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(50) NOT NULL,
+cognome VARCHAR(50) NOT NULL,
+matricola VARCHAR(50) UNIQUE NOT NULL -- UNIQUE -> students can't have the same number, every number must be UNIQUE for each student.
+);
+
+CREATE TABLE corsi(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+docente VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE iscrizioni(
+id INT AUTO_INCREMENT PRIMARY KEY,
+id_studente INT,
+id_corso INT
+);
+
+INSERT INTO studenti(nome, cognome, matricola) VALUES 
+( 'Mario','Rossi','s1234'),
+( 'Anna','Bianchi','s1235');
+
+INSERT INTO corsi(nome, docente) VALUES
+('Matematica','Prof. Bianchi'),
+('Fisica','Prof. Neri');
+
+INSERT INTO iscrizioni(id_studente, id_corso) VALUES
+(1,1),
+(2,2);
+
+

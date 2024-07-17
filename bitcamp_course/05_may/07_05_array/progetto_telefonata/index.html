@@ -1,0 +1,448 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <link href="stileCallCenter.css" rel="stylesheet" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <title>BitCamp CallCenter</title>
+
+
+    <link rel="icon" href="img/favicon.jpg" type="image/x-icon">
+</head>
+<body>
+    <section id="main">
+
+        <div id="title">
+            <h1>BITCAMP CALL-CENTER</h1>
+            <h3>Potrai usare questa pagina per gestire tranquillamente le prenotazioni, e le chiamate in arrivo presso quest'ufficio</h3>
+        </div>
+
+        <section>
+            <!-- Gestione telefonate -->
+
+            <div id="container_telefonata">
+                <!-- Aggiungi / Rimuovi -->
+                <div class="aggiungi">
+                    <h1>Inserisci Telefonata</h1>
+                    <form>
+                        <div>
+                            <label for="nome_telefonata">Nome:*</label>
+                            <br>
+                            <input type="text" id="nome_telefonata" required>
+                        </div>
+                        <div>
+                            <label for="cognome_telefonata">Cognome:*</label>
+                            <br>
+                            <input type="text" id="cognome_telefonata" required>
+                        </div>
+                        <div>
+                            <label for="telefono_telefonata">Telefono:*</label>
+                            <br>
+                            <input type="text" id="telefono_telefonata" required>
+                        </div>
+                        <div>
+                            <label for="datetime_telefonata">Data e ora:*</label>
+                            <br>
+                            <input type="datetime-local" id="datetime_telefonata" required>
+                        </div>
+                        <div>
+                            <label for="nota_telefonata">Nota:</label>
+                            <br>
+                            <textarea name="nota" id="nota_telefonata" rows="4" cols="50" placeholder="Nota personale..."></textarea>
+                        </div>
+                        <br>
+                        <button class="aggiungi_btn" type="button" onclick="aggiungi_telefonata()">Aggiungi Telefonata</button>
+                    </form>
+                </div>
+                <div class="rimuovi">
+                    <h1>Rimuovi Telefonata</h1>
+                    <p>Inserisci il numero della telefonata che vuoi rimovere</p>
+                    <input type="number" id="input_rimuovi_telefonata"> <br />
+                    <button class="rimuovi_btn" onclick="rimuovi_telefonata()">Rimuovi Telefonata</button>
+                </div>
+
+            </div>
+
+            <div class="tabb">
+                <!-- tabella -->
+
+                <h1>Lista delle telefonate</h1>
+
+                <table class="inside_tabb">
+                    <tr>
+                        <th>Numero <br />telefonata</th>
+                        <th>Nome</th>
+                        <th>Cognome</th>
+                        <th>Telefono</th>
+                        <th>Data e Ora</th>
+                        <th>Nota</th>
+                    </tr>
+                    <tbody id="tabella_telefonata">
+                    </tbody>
+                </table>
+
+            </div>
+
+
+        </section>
+
+        <section>
+            <!-- Gestione appuntamenti -->
+
+            <div id="container_appuntamenti">
+                <!-- Aggiungi / Rimuovi -->
+                <div class="aggiungi">
+                    <h1>Inserisci un appuntamento</h1>
+                    <form>
+                        <div>
+                            <label for="nome_appuntamento">Nome:*</label>
+                            <br>
+                            <input type="text" id="nome_appuntamento" required>
+                        </div>
+                        <div>
+                            <label for="cognome_appuntamento">Cognome:*</label>
+                            <br>
+                            <input type="text" id="cognome_appuntamento" required>
+                        </div>
+
+                        <div>
+                            <label for="datetime_appuntamento">Data e ora:*</label>
+                            <br>
+                            <input type="datetime-local" id="datetime_appuntamento" required>
+                        </div>
+                        <div>
+                            <label for="nota_appuntamento">Motivo dell' appuntamento:</label>
+                            <br>
+                            <textarea name="nota" id="nota_appuntamento" rows="4" cols="50" placeholder="Motivo dell' appuntamento..."></textarea>
+                        </div>
+                        <br>
+                        <button class="aggiungi_btn" type="button" onclick="aggiungi_appuntamento()">Aggiungi Appuntamento</button>
+                    </form>
+                </div>
+                <div class="rimuovi">
+                    <h1>Rimuovi un appuntamento</h1>
+                    <p>Inserisci il numero dell'appuntamento che vuoi rimovere</p>
+                    <input type="number" id="input_rimuovi_appuntamento"> <br />
+                    <button class="rimuovi_btn" onclick="rimuovi_appuntamento()">Rimuovi Appuntamento</button>
+                </div>
+
+            </div>
+
+            <div class="tabb">
+                <!-- tabella -->
+                <h1>Lista degli appuntamenti</h1>
+
+                <table class="inside_tabb">
+                    <thead>
+                        <tr>
+                            <th>Numero <br />Appuntamento</th>
+                            <th>Nome</th>
+                            <th>Cognome</th>
+                            <th>Data e Ora</th>
+                            <th>Motivo dell'appuntamento</th>
+                        </tr>
+                    </thead>
+                    <!-- esempio -->
+                    <tbody id="tabella_prenotazioni">
+                    </tbody>
+                </table>
+
+            </div>
+
+
+        </section>
+    </section>
+
+    <!--Audio alerts-->
+
+    <audio id="alertSound">
+        <source src="img/mgs_alert.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="inputSound">
+        <source src="img/zelda_alert.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+
+        var telefonate = [];
+
+
+        function aggiungi_telefonata() {
+
+            var indice_telefonata = telefonate.length + 1;
+            var nome_telefonata = document.getElementById("nome_telefonata").value;
+            var cognome_telefonata = document.getElementById("cognome_telefonata").value;
+            var telefono_telefonata = document.getElementById("telefono_telefonata").value;
+            var datetime_telefonata = document.getElementById("datetime_telefonata").value;
+            var nota_telefonata = document.getElementById("nota_telefonata").value;
+
+
+
+            var telefonata = [];
+
+            telefonata.push(indice_telefonata);
+            telefonata.push(nome_telefonata);
+            telefonata.push(cognome_telefonata);
+            telefonata.push(telefono_telefonata);
+            telefonata.push(datetime_telefonata);
+            telefonata.push(nota_telefonata);
+
+            telefonate.push(telefonata);
+            console.log(telefonate);
+
+            document.getElementById("nome_telefonata").value = "";
+            document.getElementById("cognome_telefonata").value = "";
+            document.getElementById("telefono_telefonata").value = "";
+            document.getElementById("datetime_telefonata").value = "";
+            document.getElementById("nota_telefonata").value = "";
+
+            var riga = document.createElement("tr");
+
+            var colonnaIndice = document.createElement("td");
+            var colonnaNome = document.createElement("td");
+            var colonnaCognome = document.createElement("td");
+            var colonnaTelefono = document.createElement("td");
+            var colonnaDatetime = document.createElement("td");
+            var colonnaNota = document.createElement("td");
+
+            colonnaIndice.innerText = indice_telefonata;
+            colonnaNome.innerText = nome_telefonata;
+            colonnaCognome.innerText = cognome_telefonata;
+            colonnaTelefono.innerText = telefono_telefonata;
+            colonnaDatetime.innerText = datetime_telefonata;
+            colonnaNota.innerText = nota_telefonata;
+
+
+            riga.appendChild(colonnaIndice);
+            riga.appendChild(colonnaNome);
+            riga.appendChild(colonnaCognome);
+            riga.appendChild(colonnaTelefono);
+            riga.appendChild(colonnaDatetime);
+            riga.appendChild(colonnaNota);
+
+            //Compilare tutti i campi obbligatori
+            if (!nome_telefonata || !cognome_telefonata || !telefono_telefonata || !datetime_telefonata) {
+                //far restare l'indice corretto anche con errore
+                telefonate.length--;
+                var audio = document.getElementById("alertSound");
+                audio.play();
+                alert("Assicurati di compilare tutti i campi obbligatori.");
+                return; 
+            }
+
+
+            document.getElementById("tabella_telefonata").appendChild(riga);
+
+            var audio = document.getElementById("inputSound");
+            audio.play();
+            alert("Telefonata aggiunta correttamente!");
+
+        }
+
+        function rimuovi_telefonata() {
+
+            var rigaDaCancellare = document.getElementById("input_rimuovi_telefonata").value;
+            var tab = document.getElementById("tabella_telefonata");
+            var righe = tab.getElementsByTagName("tr");
+
+            if (!rigaDaCancellare || rigaDaCancellare != telefonate.length) {
+                //Alert sound
+                var audio = document.getElementById("alertSound");
+                audio.play();
+                alert("Devi inserire un valore valido!");
+                document.getElementById("input_rimuovi_telefonata").value = "";
+                return;
+            }
+
+            // rimuovere la riga dalla tabella
+
+            for (i = 0; i <= righe.length; i++) {
+                var cella_numero_telefonata = righe[i].getElementsByTagName("td")[0];
+
+                if (cella_numero_telefonata && cella_numero_telefonata.innerText === rigaDaCancellare) {
+                    tab.deleteRow(i);
+                    telefonate.splice(i, 1);
+                    //Alert sound
+                    var audio = document.getElementById("inputSound");
+                    audio.play();
+                    alert("Telefonata rimossa con successo!");
+                    document.getElementById("input_rimuovi_telefonata").value = "";
+                    break;
+                }
+            }
+
+            // // remuove la telefonata dall'array
+
+            // var indice = document.getElementById("input_rimuovi_telefonata").value;
+            // var indice2 = indice - 1;
+            // telefonate.splice(indice2, 1);
+            // console.log(telefonate);
+
+
+            // // aggiornare l'indice di ogni telefonata
+
+            // for (i = 0; i < righe.length; i++) {
+            //     righe[i].getElementsByTagName("td")[0].innerText = i + 1;
+            // }
+
+
+
+        }
+
+
+
+
+
+        var appuntamenti = [];
+
+        function aggiungi_appuntamento() {
+            var numero_appuntamento = appuntamenti.length + 1;
+            var nome_appuntamento = document.getElementById("nome_appuntamento").value;
+            var cognome_appuntamento = document.getElementById("cognome_appuntamento").value;
+            var datetime_appuntamento = document.getElementById("datetime_appuntamento").value;
+            var nota_appuntamento = document.getElementById("nota_appuntamento").value;
+
+
+            var appuntamento = [];
+
+            appuntamento.push(numero_appuntamento);
+            appuntamento.push(nome_appuntamento);
+            appuntamento.push(cognome_appuntamento);
+            appuntamento.push(datetime_appuntamento);
+            appuntamento.push(nota_appuntamento);
+
+            appuntamenti.push(appuntamento);
+
+
+            numero_appuntamento.value = "";
+            nome_appuntamento.value = "";
+            cognome_appuntamento.value = "";
+            datetime_appuntamento.value = "";
+            nota_appuntamento.value = "";
+
+            var riga = document.createElement("tr");
+
+
+            var colonnaIndice = document.createElement("td");
+            var colonnaNome = document.createElement("td");
+            var colonnaCognome = document.createElement("td");
+            var colonnaDatetime = document.createElement("td");
+            var colonnaNota = document.createElement("td");
+
+
+            colonnaIndice.innerText = numero_appuntamento;
+            colonnaNome.innerText = nome_appuntamento;
+            colonnaCognome.innerText = cognome_appuntamento;
+            colonnaDatetime.innerText = datetime_appuntamento;
+            colonnaNota.innerText = nota_appuntamento;
+
+
+            riga.appendChild(colonnaIndice);
+            riga.appendChild(colonnaNome);
+            riga.appendChild(colonnaCognome);
+            riga.appendChild(colonnaDatetime);
+            riga.appendChild(colonnaNota);
+
+/*            if (!numero_appuntamento || !nome_appuntamento || !cognome_appuntamento || !datetime_appuntamento) {
+                alert("Devi inserire un numero valido!");
+                return;
+            }*/
+
+
+            //Compilare tutti i campi obbligatori
+
+            if (!nome_appuntamento || !cognome_appuntamento || !datetime_appuntamento) {
+                appuntamenti.length--;
+                var audio = document.getElementById("alertSound");
+                audio.play();
+                alert("Assicurati di compilare tutti i campi obbligatori.");
+
+                document.getElementById("nome_appuntamento").value = "";
+                document.getElementById("cognome_appuntamento").value = "";
+                document.getElementById("datetime_appuntamento").value = "";
+                document.getElementById("nota_appuntamento").value = "";
+
+
+                return;
+            }
+            tabella_prenotazioni.appendChild(riga);
+
+            //Alert sound
+            var audio = document.getElementById("inputSound");
+            audio.play();
+            alert("Appuntamento aggiunto correttamente!");
+
+
+            document.getElementById("nome_appuntamento").value = "";
+            document.getElementById("cognome_appuntamento").value = "";
+            document.getElementById("datetime_appuntamento").value = "";
+            document.getElementById("nota_appuntamento").value = "";
+
+
+        }
+
+
+
+        function rimuovi_appuntamento() {
+
+            var rigaDaCancellare = document.getElementById("input_rimuovi_appuntamento").value;
+            var tab = document.getElementById("tabella_prenotazioni");
+            /*            var tr = tab.getElementsByTagName("tr");*/
+            var righe = tab.getElementsByTagName("tr");
+
+            if (!rigaDaCancellare || rigaDaCancellare != appuntamenti.length) {
+                //Alert sound
+                var audio = document.getElementById("alertSound");
+                audio.play();
+                alert("Devi inserire un valore valido!");
+                document.getElementById("input_rimuovi_appuntamento").value = "";
+                return;
+            }
+
+
+
+            for (i = 0; i <= righe.length; i++) {
+                var cella_numero_appuntamento = righe[i].getElementsByTagName("td")[0];
+
+                if (cella_numero_appuntamento && cella_numero_appuntamento.innerText === rigaDaCancellare) {
+                    tab.deleteRow(i);
+                    appuntamenti.splice(i, 1);
+                    //Alert sound
+                    var audio = document.getElementById("inputSound");
+                    audio.play();
+                    alert("Appuntamento rimosso con successo!");
+                    document.getElementById("input_rimuovi_appuntamento").value = "";
+                    break;
+                }
+            }
+
+        }
+
+
+
+
+
+        //Alert ogni 45 minuti
+        function mostraMessaggio() {
+            alert("Stai andando alla grande!\nPerché non ti prendi una meritata pausa?");
+            clearInterval(intervalloID);
+            intervalloID = setInterval(mostraMessaggio, intervallo);
+        }
+
+        var intervallo = 2700000;
+        var intervalloID = setInterval(mostraMessaggio, intervallo);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>Title</title>
+
+</head>
+<body>
+
+
+  <script>
+
+    var automobile = {
+        marca: "Fiat",
+        modello: "500",
+        cilindrata: 1200,
+        annoProduzione: 2024
+    };
+
+    var persona = {
+        nome: "Mario",
+        cognome: "Rossi",
+        eta: 30,
+        saluta: function(){
+
+            return "Ciao, mi chiamo " + this.nome + " " + this.cognome;
+        }
+    };
+
+    console.log(persona); 
+    // {nome: "Mario", cognome: "Rossi", eta: 30, saluta: ƒ}
+    console.log(persona.saluta());
+    // Ciao, mi chiamo Mario Rossi
+    console.log(persona.nome);
+    // Mario
+    console.log(persona['cognome']);
+    // Rossi
+
+    persona.genere = "Maschile"; // Aggiungo una nuova proprietà
+    delete persona.eta; // Rimuovo una proprietà
+
+    // Ciclo for in
+
+    for (var x in persona){ 
+        // x  -> è una variabile che contiene il nome della proprietà ogni volta che cicla
+        // in ->
+        console.log(x + ": " + persona[x]);
+
+        // Risultato
+
+        // nome: Mario
+        // cognome: Rossi
+        // saluta: function(){
+        //     return "Ciao, mi chiamo " + this.nome + " " + this.cognome;
+        // }
+        // genere: Maschile
+    }
+    
+    var persone = [
+        {
+            nome: "Mario",
+            cognome: "Rossi",
+            eta: 30
+        },
+        {
+            nome: "Anna",
+            cognome: "Verdi",
+            eta: 25
+        },
+        {
+            nome: "Luigi",
+            cognome: "Bianchi",
+            eta: 35
+        }
+    ]
+
+    console.log(persone[1].nome);
+
+    var nuovaPersona = {
+        nome: "Pippo",
+        cognome: "Disney",
+        eta: 95
+    }
+
+    persone.push(nuovaPersona); // Aggiungo un nuovo oggetto all'array
+    persone.shift(); // Rimuovo il primo elemento dell'array
+
+    for (var i = 0; i < persone.length; i++){
+        console.log("Persona " + (i + 1) + ": " + persone[i].nome + " " + persone[i].cognome);
+        console.log("\n"); // Ti aggiunge uno spazio nel console.log
+    }
+
+    // for in é un costrutto
+    // for each é un metodo
+
+    persone.forEach(function(persona, indice){
+        console.log("Persona " + (indice + 1) + ":");
+        console.log("Nome: " + persona.nome);
+        console.log("Cognome: " + persona.cognome);
+        console.log("Etá: " + persona.eta);
+        console.log("\n");
+    })
+
+
+  
+  </script>
+  
+</body>
+</html>

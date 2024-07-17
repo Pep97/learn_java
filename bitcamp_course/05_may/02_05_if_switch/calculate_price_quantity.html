@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>Title</title>
+
+  <link rel="stylesheet" href="">
+
+</head>
+<body>
+
+  <header>  
+  </header>
+
+<main>
+
+    <h1>Calcolo del prezzo per quantitá</h1>
+    <p>Inserisci il prezzo del prodotto:</p>
+    <input type="number" id="price">
+    <p>Inserisci la quantitá:</p>
+    <input type="number" id="quantity">
+    <button onclick="calculate_price()">Calcola Prezzo Totale</button>
+    <hr>
+    <p id="output">Prezzo totale:</p>
+  </main>
+
+  <footer>
+  </footer>
+
+  <script>
+
+    function calculate_price(){
+
+        // normally you have to parseInt the value but you use * , it will works anyway, however it's good practice to alwasy use parseInt / parseFloat
+        // use parse always because if you later use the value for a calculation, it will be a number, instead of a string.
+
+        // var price = document.getElementById('price').value;
+        // var quantity = document.getElementById('quantity').value;
+
+        var price = parseFloat(document.getElementById('price').value);
+        var quantity = parseFloat(document.getElementById('quantity').value);
+        var total_price = 0;
+        var answer = document.getElementById("output");
+
+        
+        if (price <= 0 || quantity <= 0){
+        
+            alert("Il prezzo o la quantitá devono essere maggiori di zero.")
+        
+        } else if( quantity > 10){
+
+            total_price = price * quantity * 0.9;
+            answer.innerHTML = "Il prezzo totale con uno sconto per la quantitá é: " + total_price + " euro";
+        
+        } else {
+
+            total_price = price * quantity;
+            answer.innerHTML = "Il prezzo totale é: " + total_price + " euro";
+
+        }
+    }
+
+    
+  </script>
+  
+</body>
+</html>

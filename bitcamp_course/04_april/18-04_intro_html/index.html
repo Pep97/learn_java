@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- if you put the language as English and the user is in italy, and he reads normally in italian,
+    the user will receive the reuqest from the browser to ask to translate the content. -> either way nowadays 
+    modern browsers will ask anyway to traduce the content.  -->
+
+    <!-- xmlns="https://www.w3.org/1999/xhtml"  -> this is saying to the browser to follow the last
+    updated version of html, in this case HTML5. (regulated by the WWW consortium) -->
+
+    <!-- save name of files in 
+        
+        camel case -> ThisIsCamelCase
+        undercase -> this_is_with_the_underscore 
+    -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvenuti nella mia pagina web</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Use the main browser for test Google Chrome -> the majory of the users use it -->
+    <h1>Hello world</h1>
+    <p>This is a paragraph</p>
+    <div style="display: flex; justify-content: center;">
+        <img src="https://picsum.photos/200/300" alt="Image" class="pandaimage" >
+
+        <!-- Website advised to take photos https://picsum.photos -->
+    </div>
+
+    <hr>
+
+    <h2>List not ordered</h2>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <h2>Ordered list</h2>
+
+    <ol>
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Kiwi</li>
+    </ol>
+
+    <!-- block -> take up the full width available, with a new line before and after the element 
+        inline -> keeps adding content in the same line   -->
+
+    <form>
+        <label for="email-insert">Inserisci una email:</label>
+        <br>
+        <input type="email" id="email-insert" name="email-insert" placeholder="write here...">
+        <button type="submit">Submit</button>
+    </form>
+
+    <hr>
+
+    <!-- table with 3 colomns and 3 rows -->
+
+    <h2>HTML table</h2>
+
+    <table>
+        <tr> <!-- table row -->
+            <th>Name</th> <!-- table header -->
+            <th>Surname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Mario</td>
+            <td>Rossi</td>
+            <td>25</td>
+        </tr>        
+        <tr>
+            <td>Stefano</td>
+            <td>Rossi</td>
+            <td>35</td>
+        </tr>
+        <tr>
+            <td>Amara</td>
+            <td>Rossi</td>
+            <td>22</td>
+        </tr>
+        
+    </table>
+
+    <hr> <!-- horizontal line -->
+
+    <!-- text formatting -->
+
+    <p>This is vital information</p>
+    <p><strong>This is vital information</strong></p> <!-- you can also use <b></b> -->
+    <p><em>This is vital information</em></p>
+    <p><u>This is vital information</u></p>
+    <p style="color: green;">This is vital information</p>
+
+</body>
+</html>

@@ -1,0 +1,1259 @@
+﻿<!DOCTYPE html>
+
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Calendario attività</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Link icone -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- links per header -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+
+    <!-- link per alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            font-size: 18px;
+            --light-green: #BBD6B8;
+            --light-grey: #AEC2B6;
+            --dark-grey: #94AF9F;
+            --light-yellow: #DBE4C6;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        header .header-blue {
+            background: linear-gradient(135deg, --dark-grey, --light-green);
+            background-color: var(--dark-grey);
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+
+        .header-blue .navbar {
+            background: transparent;
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            color: var(--dark-grey);
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+        }
+
+        @media (min-width:768px) {
+            .header-blue .navbar {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+
+        .img_logo {
+            width: 130px;
+            height: 40px;
+        }
+
+        .header-blue .navbar .navbar-brand {
+            font-weight: bold;
+            color: inherit;
+        }
+
+        .navbar-brand {
+            height: auto;
+        }
+
+        .header-blue .navbar .navbar-brand:hover {
+            color: #f0f0f0;
+        }
+
+        .header-blue .navbar .navbar-collapse {
+            border-top: 1px solid rgba(255,255,255,0.3);
+            margin-top: .5rem;
+        }
+
+        @media (min-width:768px) {
+            .header-blue .navbar .navbar-collapse {
+                border-color: transparent;
+                margin: 0;
+            }
+        }
+
+        .dropdown_servizi {
+            color: white !important;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--light-grey) !important;
+        }
+
+        .dropdown_servizi:hover {
+            background-color: transparent !important;
+        }
+
+        .header-blue .navbar .navbar-collapse span .login {
+            color: #fff;
+            margin-right: .5rem;
+            text-decoration: none;
+        }
+
+            .header-blue .navbar .navbar-collapse span .login:hover {
+                color: #dfd8d8;
+            }
+
+        .header-blue .navbar .navbar-toggler {
+            border-color: rgba(255,255,255,0.3);
+        }
+
+            .header-blue .navbar .navbar-toggler:hover, .header-blue .navbar-toggler:focus {
+                background: none;
+            }
+
+        .header-blue .navbar .navbar-nav a.active, .header-blue .navbar .navbar-nav > .show .dropdown-item {
+            background: none;
+            box-shadow: none;
+        }
+
+        @media (min-width: 768px) {
+            .header-blue .navbar-nav .nav-link {
+                padding-left: .7rem;
+                padding-right: .7rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            li {
+                margin-left: 15px;
+            }
+        }
+
+
+        @media (min-width: 992px) {
+            .header-blue .navbar-nav .nav-link {
+                padding-left: 1.2rem;
+                padding-right: 1.2rem;
+            }
+        }
+
+        .header-blue .navbar .navbar-nav > li > .dropdown-menu {
+            margin-top: -5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,.1);
+            background-color: #fff;
+            border-radius: 2px;
+        }
+
+        .header-blue .navbar .dropdown-menu .dropdown-item:focus, .header-blue .navbar .dropdown-menu .dropdown-item {
+            line-height: 2;
+            color: #37434d;
+        }
+
+            .header-blue .navbar .dropdown-menu .dropdown-item:focus, .header-blue .navbar .dropdown-menu .dropdown-item:hover {
+                background: #ebeff1;
+            }
+
+        .header-blue .action-button, .header-blue .action-button:not(.disabled):active {
+            border: 1px solid rgba(255,255,255,0.7);
+            border-radius: 40px;
+            color: #ebeff1;
+            box-shadow: none;
+            text-shadow: none;
+            padding: .3rem .8rem;
+            background: transparent;
+            transition: background-color 0.25s;
+            outline: none;
+        }
+
+            .header-blue .action-button:hover {
+                color: #fff;
+            }
+
+        .header-blue .navbar .form-inline label {
+            color: #d9d9d9;
+        }
+
+        .header-blue .navbar .form-inline .search-field {
+            display: inline-block;
+            width: 80%;
+            background: none;
+            border: none;
+            border-bottom: 1px solid transparent;
+            border-radius: 0;
+            color: #ccc;
+            box-shadow: none;
+            color: inherit;
+            transition: border-bottom-color 0.3s;
+        }
+
+            .header-blue .navbar .form-inline .search-field:focus {
+                border-bottom: 1px solid #ccc;
+            }
+
+        .header-blue .hero {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        @media (min-width:768px) {
+            .header-blue .hero {
+                margin-top: 60px;
+                text-align: left;
+            }
+        }
+
+        .header-blue .hero h1 {
+            color: #fff;
+            font-size: 40px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        @media (min-width:992px) {
+            .header-blue .hero h1 {
+                margin-top: 190px;
+                margin-bottom: 24px;
+                line-height: 1.2;
+            }
+        }
+
+        .header-blue .hero p {
+            color: rgba(255,255,255,0.8);
+            font-size: 20px;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .header-blue .phone-holder {
+            text-align: right;
+        }
+
+        .header-blue div.iphone-mockup {
+            position: relative;
+            max-width: 300px;
+            margin: 20px;
+            display: inline-block;
+        }
+
+        .header-blue .iphone-mockup img.device {
+            width: 100%;
+            height: auto;
+        }
+
+        .header-blue .iphone-mockup .screen {
+            position: absolute;
+            width: 88%;
+            height: 77%;
+            top: 12%;
+            border-radius: 2px;
+            left: 6%;
+            border: 1px solid #444;
+            background-color: #aaa;
+            overflow: hidden;
+            background: url(../../assets/img/screen-content-iphone-6.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+            .header-blue .iphone-mockup .screen:before {
+                content: '';
+                background-color: #fff;
+                position: absolute;
+                width: 70%;
+                height: 140%;
+                top: -12%;
+                right: -60%;
+                transform: rotate(-19deg);
+                opacity: 0.2;
+            }
+
+        
+
+        /* registrati - signup */
+
+        .registrati.btn-login {
+            font-size: 0.9rem;
+            letter-spacing: 0.05rem;
+            padding: 0.75rem 1rem;
+        }
+
+        .btn-google {
+            color: white !important;
+            background-color: #ea4335;
+        }
+
+        .btn-facebook {
+            color: white !important;
+            background-color: #3b5998;
+        }
+
+        .main-button {
+            background-color: var(--light-green);
+        }
+
+            .main-button:hover {
+                background-color: var(--light-grey);
+            }
+
+        .color {
+            color: black;
+        }
+
+        @media screen and (max-width: 425px) {
+            .card-body {
+                padding: 0px;
+                padding-top: 10px;
+            }
+
+            .p-4 {
+                padding: 0px;
+            }
+
+            .btn-google {
+                font-size: clamp(0.4rem, 2.5vw, 1rem);
+            }
+
+            .btn-facebook {
+                font-size: clamp(0.4rem, 2.5vw, 1rem);
+            }
+        }
+
+        }
+
+        /* accedi - login */
+
+        .accedi .btn-login {
+            font-size: 0.9rem;
+            letter-spacing: 0.05rem;
+            padding: 0.75rem 1rem;
+        }
+
+        .btn-google {
+            color: white !important;
+            background-color: #ea4335;
+        }
+
+        .btn-facebook {
+            color: white !important;
+            background-color: #3b5998;
+        }
+
+        .main-button {
+            background-color: var(--light-green);
+        }
+
+            .main-button:hover {
+                background-color: var(--light-grey);
+            }
+
+        .swal2-close:focus {
+            outline: none;
+        }
+
+        .color {
+            color: black;
+        }
+
+        @media screen and (max-width: 425px) {
+            .card-body {
+                padding: 0px;
+                padding-top: 10px;
+            }
+
+            .p-4 {
+                padding: 0px;
+            }
+
+            .btn-google {
+                font-size: clamp(0.5rem, 2.5vw, 1rem);
+            }
+
+            .btn-facebook {
+                font-size: clamp(0.5rem, 2.5vw, 1rem);
+            }
+        }
+
+
+
+        h1 {
+            color: rgb(174, 194, 182);
+            margin: 20px;
+            padding: 10px;
+        }
+
+
+        .coloreContenitore {
+            background-color: rgba(174, 194, 182);
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            width: 600px;
+            height: 600px;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 60px;
+        }
+
+
+        .container2 {
+            background-color: rgba(240, 240, 240, 0.4);
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            width: 500px;
+            height: 500px;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        .immagineContainer2 {
+            height: 50px;
+            width: 50px;
+            margin: 10px;
+        }
+
+
+        .textareaNota {
+            margin: 20px;
+            padding: 15px;
+            border-radius: 15px;
+            height: 90px;
+            width: 400px;
+            border: rgb(219, 228, 198);
+        }
+
+
+        .data {
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .ora {
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+
+        .bottoneAggiungi {
+            border: none;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+
+
+        .selezione {
+            border-radius: 10px;
+            margin: 30px;
+        }
+
+
+        .container3 {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        /*bottone creato dalla funzione elimina bottone*/
+        button {
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+
+
+
+        @media screen and (max-width: 1000px) {
+            .contenitorePrincipale {
+                display: flex;
+            }
+        }
+
+        /* Footer */
+
+        .deneb_footer {
+            margin-top: 50px;
+            background-color: var(--dark-grey);
+        }
+
+            .deneb_footer .widget_wrapper {
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-top: 20px;
+                padding-bottom: 40px;
+            }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .img_logo {
+            width: 120px;
+            height: 40px;
+        }
+
+        .deneb_footer .widget_wrapper .widget .widget_title {
+            margin-bottom: 30px;
+        }
+
+            .deneb_footer .widget_wrapper .widget .widget_title h4 {
+                font-weight: bold;
+            }
+
+                .deneb_footer .widget_wrapper .widget .widget_title h4:after {
+                    content: "";
+                    display: block;
+                    max-width: 38px;
+                    height: 2px;
+                    margin-top: 5px;
+                }
+
+        .deneb_footer .widget_wrapper .widegt_about p {
+            margin-bottom: 20px;
+        }
+
+        .deneb_footer .widget_wrapper .widegt_about .social li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+            .deneb_footer .widget_wrapper .widegt_about .social li a {
+                display: block;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-radius: 50%;
+                background-color: var(--light-yellow);
+                color: var(--dark-grey);
+                font-size: 14px;
+                -webkit-transition: all all 0.5s ease-out 0s;
+                -moz-transition: all all 0.5s ease-out 0s;
+                -ms-transition: all all 0.5s ease-out 0s;
+                -o-transition: all all 0.5s ease-out 0s;
+                transition: all all 0.5s ease-out 0s;
+            }
+
+                .deneb_footer .widget_wrapper .widegt_about .social li a:hover,
+                .deneb_footer .widget_wrapper .widegt_about .social li a:focus {
+                    color: var(--dark-grey);
+                    box-shadow: 2.5px 4.33px 15px 0px rgba(154, 175, 57, 0.4);
+                }
+
+        .deneb_footer .widget_wrapper .widget_link ul li {
+            margin-bottom: 5px;
+        }
+
+            .deneb_footer .widget_wrapper .widget_link ul li a {
+                text-transform: capitalize;
+                color: black;
+            }
+
+                .deneb_footer .widget_wrapper .widget_link ul li a:hover,
+                .deneb_footer .widget_wrapper .widget_link ul li a:focus {
+                    color: var(--light-yellow);
+                }
+
+        .deneb_footer .widget_wrapper .widget_contact .contact_info .single_info {
+            max-width: 250px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+            .deneb_footer .widget_wrapper .widget_contact .contact_info .single_info .icon {
+                font-size: 12px;
+                color: var(--light-yellow);
+                margin-right: 10px;
+            }
+
+            .deneb_footer .widget_wrapper .widget_contact .contact_info .single_info .info p a {
+                color: black;
+            }
+
+                .deneb_footer .widget_wrapper .widget_contact .contact_info .single_info .info p a:hover {
+                    color: var(--light-yellow);
+                }
+
+            .deneb_footer .widget_wrapper .widget_contact .contact_info .single_info .info p span {
+                display: block;
+            }
+
+        .deneb_footer .copyright_area {
+            background: black;
+            padding: 10px 0;
+        }
+
+            .deneb_footer .copyright_area .copyright_text {
+                text-align: center;
+            }
+
+                .deneb_footer .copyright_area .copyright_text p {
+                    color: var(--dark-grey);
+                }
+
+        .copyright_text p {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .deneb_footer .copyright_area .copyright_text p span {
+            color: #feb000;
+        }
+
+        .deneb_cta .cta_wrapper {
+            padding: 45px 50px 42px;
+            max-width: 970px;
+            border-radius: 15px;
+            margin: auto;
+            margin-bottom: -135px;
+            position: relative;
+            background-image: -moz-linear-gradient(0deg, #ffbd27 0%, #feb000 100%);
+            background-image: -webkit-linear-gradient(0deg, #ffbd27 0%, #feb000 100%);
+            background-image: -ms-linear-gradient(0deg, #ffbd27 0%, #feb000 100%);
+            box-shadow: 2.5px 4.33px 15px 0px rgba(254, 176, 0, 0.4);
+            z-index: 1;
+        }
+
+            .deneb_cta .cta_wrapper:after {
+                content: "";
+                background-position: bottom;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+            }
+
+            .deneb_cta .cta_wrapper .cta_content h3 {
+                color: #fff;
+                font-weight: bold;
+            }
+
+        @media (max-width: 767px) {
+            .deneb_cta .cta_wrapper .cta_content h3 {
+                font-size: 24px;
+            }
+        }
+
+        .deneb_cta .cta_wrapper .cta_content h3:after {
+            content: "";
+            display: block;
+            max-width: 110px;
+            height: 2px;
+            margin-top: 13px;
+            margin-bottom: 24px;
+        }
+
+        .deneb_cta .cta_wrapper .cta_content p {
+            color: #fff;
+        }
+
+        .deneb_cta .cta_wrapper .button_box {
+            float: right;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            .deneb_cta .cta_wrapper .button_box {
+                float: none;
+                text-align: left;
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .deneb_cta .cta_wrapper .button_box {
+                float: none;
+                text-align: center;
+                margin-top: 30px;
+            }
+        }
+
+        .deneb_cta .cta_wrapper .button_box .deneb_btn {
+            background: #fff;
+            color: #011a3e;
+        }
+
+            .deneb_cta .cta_wrapper .button_box .deneb_btn:hover,
+            .deneb_cta .cta_wrapper .button_box .deneb_btn:focus {
+                box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.15);
+            }
+
+
+    </style>
+
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+    <header>
+        <div class="header-blue">
+            <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                <div class="container">
+                    <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo" class="img_logo"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse"
+                         id="navcol-1">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html">Home</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link active" href="asilo1.html">Chi siamo</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle nav-link dropdown_servizi" data-toggle="dropdown" aria-expanded="false" href="#">Servizi </a>
+                                <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" role="presentation" href="presenze.html">Gestione Presenze</a>
+                                    <a class="dropdown-item" role="presentation" href="armadietto1-2.html">Gestione Armadietto</a>
+                                    <a class="dropdown-item" role="presentation" href="menu2.html">Gestione Mensa</a>
+                                    <a class="dropdown-item" role="presentation" href="formMessaggi2.html">App Messaggistica</a>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <form class="form-inline mr-auto" target="_self">
+                        </form><span class="navbar-text"><a href="#" class="login" onclick="accedi()">Accedi</a></span><a class="btn btn-light action-button" role="button" href="#" onclick="registrati()">Registrati</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!--Titolo + icona Calendario-->
+    <h1>
+        Calendario
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+            <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
+            <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+        </svg>
+    </h1>
+
+
+
+    <!--Card Lunedi-->
+
+    <div class="contenitorePrincipale grid text-center">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body ">
+                        <p class="text-center lead">Lunedi</p>
+                        <table id="lunedi" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Giorno</th>
+                                    <th>Ora</th>
+                                    <th>Nota</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card martedi-->
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center lead">Martedi</p>
+                        <table id="martedi" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Giorno</th>
+                                    <th>Ora</th>
+                                    <th>Nota</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--Card mercoledi-->
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center lead">Mercoledi</p>
+
+                        <table id="mercoledi" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Giorno</th>
+                                    <th>Ora</th>
+                                    <th>Nota</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--Card giovedi-->
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center lead">Giovedi</p>
+
+                        <table id="giovedi" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Giorno</th>
+                                    <th>Ora</th>
+                                    <th>Nota</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Card venerdi-->
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center lead">Venerdi</p>
+                        <table id="venerdi" class="table">
+
+                            <thead>
+                                <tr>
+                                    <th>Giorno</th>
+                                    <th>Ora</th>
+                                    <th>Nota</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Aggiunta o eliminazione attività sul calendario-->
+    <div class="coloreContenitore">
+        <div class="container2">
+            <div class="titoloContainer2">
+                <img class="immagineContainer2" src="img/iconaNota.png" />
+                <h4 class="lead">Aggiungi una nota</h4>
+            </div>
+
+            <select id="selezione" class="selezione lead" required>
+                <br />
+                <option value="vuoto">--Seleziona giorno--</option>
+                <option value="lunedi">Lunedi</option>
+                <option value="martedi">Martedi</option>
+                <option value="mercoledi">Mercoledi</option>
+                <option value="giovedi">Giovedi</option>
+                <option value="venerdi">Venerdi</option>
+            </select> <br />
+            <input class="data" id="data" type="date" required /> <br />
+            <input class="ora" id="ora" type="time" required /> <br />
+            <textarea class="textareaNota lead" placeholder="Inserire nota" id="nota"></textarea>
+            <button class="bottoneAggiungi lead" onclick="aggiungiNota()">Aggiungi</button>
+
+
+        </div>
+    </div>
+    <div class="container3">
+        <h3>Eventi programmati</h3>
+
+        <!--Lista bambini per evento-->
+        <ul id="listaEvento1">
+        </ul>
+
+        <!--Lista bambini per secondo evento-->
+        <ul id="listaEvento2">
+        </ul>
+
+    </div>
+
+
+
+    <footer class="deneb_footer">
+        <div class="widget_wrapper" style="background-image: url(http://demo.tortoizthemes.com/deneb-html/deneb-ltr/assets/images/footer_bg.png);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12 center-content">
+                        <div class="widget widegt_about">
+                            <div class="widget_title">
+                                <img src="img/logo.png" class="img-fluid img_logo" alt="">
+                            </div>
+                            <p>Grazie per aver scelto il nostro sistema di gestione per asili nidi. Ci impegniamo a fornire un servizio di alta qualità per facilitare la gestione quotidiana del vostro asilo nido. Per qualsiasi domanda o assistenza, non esitate a contattarci.</p>						<ul class="social">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 center-content">
+                        <div class="widget widget_link">
+                            <div class="widget_title">
+                                <h4>Link Utili</h4>
+                            </div>
+                            <ul>
+                                <li><a href="#">Chi Siamo</a></li>
+                                <li><a href="#">Gestione Calendario</a></li>
+                                <li><a href="#">Gestione Presenze</a></li>
+                                <li><a href="#">Gestione Armadietto</a></li>
+                                <li><a href="#">Gestione Mensa</a></li>
+                                <li><a href="#">App Messaggistica</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 center-content">
+                        <div class="widget widget_contact">
+                            <div class="widget_title">
+                                <h4>Contattaci</h4>
+                            </div>
+                            <div class="contact_info">
+                                <div class="single_info">
+                                    <div class="icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <div class="info">
+                                        <p>+39 924-614-7999</a></p>
+                                    </div>
+                                </div>
+                                <div class="single_info">
+                                    <div class="icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="info">
+                                        <p><a href="mailto:info@deneb.com">info@deneb.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="single_info">
+                                    <div class="icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="info">
+                                        <p>Via Aldo Moro, 20</p>
+                                        <p>20452 Milano(MI)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright_text">
+                            <p>Copyright &copy; 2020 All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <script>// alert pop-up accedi - registrati
+
+        function accedi() {
+            var html = `
+        <div class="card-body accedi">
+        <form>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" required autofocus>
+            <label for="floatingInputUsername">Username</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+
+          <div class="d-grid mb-2">
+            <button class="btn btn-lg btn-login fw-bold text-uppercase main-button" type="submit">Accedi</button>
+          </div>
+
+          <a class="d-block text-center mt-2 small color" onclick="registrati()" href="#" onClick>Non hai un account? Registrati</a>
+
+          <hr class="my-4">
+
+          <div class="d-grid mb-2">
+            <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
+              <i class="fab fa-google me-2"></i> Accedi con Google
+            </button>
+          </div>
+
+          <div class="d-grid">
+            <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
+              <i class="fab fa-facebook-f me-2"></i> Accedi con Facebook
+            </button>
+          </div>
+
+        </form>
+        </div>`;
+
+            Swal.fire({
+                title: 'Accedi',
+                html: html,
+                showCloseButton: true,
+                showCancelButton: false,
+                showConfirmButton: false,
+            });
+        }
+
+        function registrati() {
+            var html = `
+        <div class="card-body registrati">
+                        <form>
+
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" required autofocus>
+                            <label for="floatingInputUsername">Username</label>
+                          </div>
+
+                          <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com">
+                            <label for="floatingInputEmail">Email</label>
+                          </div>
+
+                          <hr>
+
+                          <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                          </div>
+
+                          <div class="d-grid mb-2">
+                            <button class="btn btn-lg btn-login fw-bold text-uppercase main-button" type="submit">Registrati</button>
+                          </div>
+
+                          <a class="d-block text-center mt-2 small color" href="#" onclick="accedi()">Hai un account? Accedi</a>
+
+                          <hr class="my-4">
+
+                          <div class="d-grid mb-2">
+                            <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
+                              <i class="fab fa-google me-2"></i> Registrati con Google
+                            </button>
+                          </div>
+
+                          <div class="d-grid">
+                            <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
+                              <i class="fab fa-facebook-f me-2"></i> Registrati con Facebook
+                            </button>
+                          </div>
+
+                        </form>
+                      </div>
+
+`;
+
+            Swal.fire({
+                title: 'Registrati',
+                html: html,
+                showCloseButton: true,
+                showCancelButton: false,
+                showConfirmButton: false,
+            });
+        }
+
+        // Elimina il colore di default di bootstrap nel dropdown
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var dropdown_servizi = document.querySelector('.dropdown_servizi');
+            var dropdown_items = document.querySelectorAll('.dropdown-item');
+
+            dropdown_items.forEach(function (dropdownItem) {
+                dropdownItem.addEventListener('mouseover', function () {
+                    dropdown_servizi.style.backgroundColor = 'var(--dark-grey)';
+                });
+
+                dropdownItem.addEventListener('mouseout', function () {
+                    dropdown_servizi.style.backgroundColor = "transparent !important";
+                });
+            });
+        });
+
+
+
+
+
+
+        if (document.getElementById("ora").value === "" || document.getElementById(data).value === "") {
+
+        }
+
+
+
+
+
+
+        //recupero dati dell'utente dal form
+        function aggiungiNota() {
+
+            var giorno = document.getElementById("selezione");
+            var sceltaGiorno = giorno.value;
+            var data = document.getElementById("data").value;
+            var ora = document.getElementById("ora").value;
+            var nota = document.getElementById("nota").value;
+
+            creaTabella(sceltaGiorno, data, ora, nota);
+        }
+
+        function creaTabella(giorno, data, ora, nota) {
+            var tabella = document.getElementById(giorno);
+
+            //crea  righe e colonne nella tabella
+            var riga = document.createElement("tr");
+            var colonnaData = document.createElement("td");
+            var colonnaOra = document.createElement("td");
+            var colonnaNota = document.createElement("td");
+
+            //questa colonna serve dopo per eliminare una nota.
+            var colonnaElimina = document.createElement("td");
+
+            colonnaData.innerText = data;
+            colonnaOra.innerText = ora;
+            colonnaNota.innerText = nota;
+
+            //aggiunta delle celle alla riga
+            riga.appendChild(colonnaData);
+            riga.appendChild(colonnaOra);
+            riga.appendChild(colonnaNota);
+
+            //aggiunta della riga alla tabella
+            tabella.appendChild(riga);
+
+            //Bottone elimina su ogni nota
+            var elimina = document.createElement("button");
+            elimina.innerText = "Elimina";
+            elimina.addEventListener("click", function () {
+                eliminaNota(riga);
+            });
+
+            //creazione bottone e apparizione sulla nota
+            colonnaElimina.appendChild(elimina);
+            riga.appendChild(colonnaElimina);
+
+
+        }
+
+        function eliminaNota(riga) {
+            riga.parentNode.removeChild(riga);
+        }
+
+        //data minima
+        var oggi = new Date();
+        var dataOdierna = oggi.toISOString().split("T")[0];
+        document.getElementById("data").setAttribute("min", dataOdierna);
+
+
+
+        //Array datebase e funzione
+
+        var promemoria = [
+            {
+                giorno: "lunedi",
+                data: "2024/05/12",
+                ora: "11:00",
+                nota: "Giochi all'aperto"
+            },
+            {
+                giorno: "giovedi",
+                data: "2024/05/15",
+                ora: "Chiuso",
+                nota: "Manutenzione luci"
+            },
+            {
+                giorno: "venerdi",
+                data: "2024/05/16",
+                ora: "Vacanza",
+                nota: "Festa del patrono"
+            }
+        ];
+
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+
+            // Aggiunge i promemoria alla pagina quando si carica il doc
+            aggiungiPromemoriaAllaPagina(event);
+        });
+
+        function aggiungiPromemoriaAllaPagina(event) {
+            event.preventDefault();
+            // Cicla attraverso su array promemoria
+            promemoria.forEach(function (promemoria) {
+                // Esegue la funzione creaTabella per aggiungere il promemoria alla tabella corretta del giorno selezionato dall'utente
+                creaTabella(promemoria.giorno, promemoria.data, promemoria.ora, promemoria.nota);
+            });
+        }</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

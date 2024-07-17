@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>Title</title>
+
+  <link rel="stylesheet" href="">
+
+</head>
+<body>
+
+  <main>
+  </main>
+
+  <script>
+
+    // switch
+
+    var frutto = "Mela";
+    var descrizione = "";
+
+    switch(frutto){
+        case "Banana": // if frutto === "Banana" then do this -> descrizione = "Le banane sono gialle e dolci"; then break.
+            descrizione = "Le banane sono gialle e dolci";
+            break;
+        case "Mela":
+            descrizione = "Le mele sono rosse e acidule";
+            break;
+        case "Kiwi":
+            descrizione = "I kiwi sono verdi";
+            break;
+        default: // if none of the above cases are true then do this -> descrizione = "Non conosco questo frutto";
+            descrizione = "Non conosco questo frutto";
+        }
+
+        console.log(descrizione);
+
+        var giorno = 2;
+        var nome_giorno = "";
+
+        switch(giorno){
+            case "1":
+            case "2":
+            case "3":
+            case "4":
+            case "5":
+                nome_giorno = "Giorno lavorativo"; 
+                break;
+                // if "giorno" is a number between 1-5, nome_giorno will be "Giorno lavorativo"
+            case "6":
+            case "7":
+                nome_giorno = "Fine settimana";
+                break;
+            default:
+                nome_giorno = "Valore non valido";
+            // if you never put "break" the code will continue to run until default.
+
+
+        }
+
+        console.log(nome_giorno);
+
+  </script>
+  
+</body>
+</html>

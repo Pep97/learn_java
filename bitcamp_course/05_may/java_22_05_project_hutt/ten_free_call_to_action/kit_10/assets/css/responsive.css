@@ -1,0 +1,97 @@
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .d2c_c2a_wrapper {
+        padding: 70px 0px 80px;
+    }
+    h2 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .btn {
+        padding: 12px 30px 11px;
+    }
+    .d2c_c2a_btn i {
+        font-size: 24px;
+    }
+    .d2c_c2a_btn p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .d2c_c2a_wrapper {
+        padding: 80px 0px 90px;
+    }
+    h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .btn {
+        padding: 14px 30px 13px;
+    }
+    .d2c_c2a_btn i {
+        font-size: 30px;
+    }
+    .d2c_c2a_btn p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+
+
+/* 
+    Template Name: {{10+ Free Website Call To Action | Bootstrap UI Kits}}
+    Template URL: {{https://designtocodes.com/product/10-free-website-call-to-action}}
+    Description: {{Are you struggling to craft CTAs that capture attention and inspire action? Check out our 10+ free website Call To Action now!}}
+    Author: DesignToCodes
+    Author URL: https://www.designtocodes.com
+    Text Domain: {{Call To Action | Bootstrap UI Kits}}
+*/
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .btn {
+        padding: 14px 30px 13px;
+    }
+    .d2c_c2a_btn i {
+        font-size: 30px;
+    }
+    .d2c_c2a_btn p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+    h2 {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+    p {
+        margin-bottom: 40px;
+    }
+    .d2c_c2a_btn i {
+        font-size: 30px;
+    }
+    .d2c_c2a_btn p {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}

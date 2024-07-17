@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segreteria - Gestione appuntamenti</title>
+
+    <!-- bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">        
+        <div class="container">
+            <a href="#" class="navbar-brand">Segreteria Medica</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#appuntamenti" class="nav-link">Appuntamenti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#prenota" class="nav-link">Prenota</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contatti" class="nav-link">Contatti</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- table -->
+
+    <div class="container mt-4" id="appuntamenti">
+        <h2>Prossimi appuntamenti</h2>
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Data e Ora</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Tipo Visita</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>29/04/2022 10:00</td>
+                    <td>Mario Rossi</td>
+                    <td>Visita di controllo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>29/04/2022 11:00</td>
+                    <td>Luca Bianchi</td>
+                    <td>Esame del sangue</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>29/04/2022 12:00</td>
+                    <td>Paolo Verdi</td>
+                    <td>Visita di controllo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- form -->
+
+    <div class="container mt-4" id="prenota">
+        <h2>Prenota un appuntamento</h2>
+        <form>
+            <div class="mb-3">
+                <label for="dataOra" class="form-label">Data e Ora</label>
+                <input type="datetime-local" class="form-control" id="dataOra" name="dataOra" required>
+            </div>
+            <div class="mb-3">
+                <label for="nomePaziente" class="form-label">Nome Paziente</label>
+                <input type="text" class="form-control" id="nomePaziente" name="nomePaziente" required>
+            </div>
+            <div class="mb-3">
+                <label for="tipoVisita" class="form-label">Tipo Visita</label>
+                <input type="text" class="form-control" id="tipoVisita" name="tipoVisita" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Pronota</button>
+        </form>
+    </div>
+
+    <!--  -->
+
+    <div class="container mt-4" id="contatti">
+        <h2>Contatti</h2>
+        <p>Per ulteriori informazioni o assistenza, contattaci</p>
+        <address>
+            <strong>Segreteria Medica</strong><br>
+            Indirizzo: Via Roma, 123<br>
+            Telefono: 0123 456789<br>
+            Email: info@studiomedico.it
+        </address>
+    </div>
+
+
+    
+</body>
+</html>

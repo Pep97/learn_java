@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>Carello Elettronico</title>
+
+  <link rel="stylesheet" href="">
+
+</head>
+<body>
+
+    <h1>Carrello Magliette</h1>
+    <p>Aggiungi al carello:</p>
+    <div>
+        <label for="maglietta_rossa">Maglietta Rossa 10€</label>
+        <input type="checkbox" id="maglietta_rossa" value="10">
+    </div>
+    <div>
+        <label for="maglietta_blue">Maglietta Blue 12€</label>
+        <input type="checkbox" id="maglietta_blue" value="12">
+    </div>
+    <div>
+        <label for="maglietta_verde">Maglietta Verde 15€</label>
+        <input type="checkbox" id="maglietta_verde" value="15">
+    </div>
+    <button onclick="calcolaTotale()">Aggiungi al carello</button>
+    <hr>
+    <p>Il tuo Carrello:</p>
+    <ul id="Carrello"></ul>
+    <p>Totale: <span id="totale"></span> €</p>
+
+
+  <script>
+
+    function calcolaTotale(){
+        var carrello = document.getElementById("Carrello");
+        var totale = 0;
+        var magliette = document.querySelectorAll('input[type=checkbox]:checked'); 
+        // seleziona tutti gli input di tipo checkbox
+        // con ":checked" selezioniamo solo quelli che sono selezionati
+
+        carrello.innerHTML = ""; // svuota il carrello
+
+        for (var i = 0; i < magliette.length; i++){
+            var maglietta = magliette[i];
+            var nomeMaglietta = maglietta.getAttribute("id");
+            var prezzoMaglietta = maglietta.getAttribute("value");
+
+            var li = document.createElement("li");
+            li.innerHTML = nomeMaglietta + " " + prezzoMaglietta + "€";
+
+            carrello.appendChild(li);
+
+            totale += parseInt(prezzoMaglietta);
+        }
+
+        document.getElementById("totale").innerHTML = totale;
+
+    }
+
+
+  </script>
+  
+</body>
+</html>

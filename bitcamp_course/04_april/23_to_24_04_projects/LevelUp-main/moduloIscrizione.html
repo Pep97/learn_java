@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="LevelUp" />
+    <meta name="keywords" content="iscrizione, modulo, azioni levelup" />
+    <meta name="author" content="Team 1 BitCamp" />
+    <title>Iscrizione - LevelUp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Atomic+Age&family=Carrois+Gothic+SC&family=DotGothic16&family=Jersey+25&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+
+</head>
+<body>
+    <!--Header-->
+    <header>
+
+        <div id="logoleft">
+            <img src="img/logo.png" id="logo" alt="logo" />
+        </div>
+
+        <div id="associazione">
+            <a href="index.html">
+                <h1>LEVEL <br />UP</h1>
+            </a>
+
+        </div>
+
+        <div id="header_right">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="moduloIscrizione.html">Modulo di Iscrizione</a>
+                <a href="giochiAssociazione.html">Giochi Associazione</a>
+                <a href="tornei.html">Tornei</a>
+                <a href="chiSiamo.html">Chi Siamo</a>
+                <a href="shopUsato.html">Shop Usato</a>
+                <a href="downloadUtili.html">Download Utili</a>
+            </nav>
+
+
+
+        </div>
+
+
+    </header>
+    <main id="modulo_iscrizione">
+        <div class="main-container">
+
+            <div class="top_text">
+                <h1 id="title">Iscriviti alla nostra associazione</h1>
+                <p id="description">Compila tutti i dati e invia il form ti risponderemo il prima possibile</p>
+            </div>
+
+
+
+            <form action="iscrizione_associazione" method="get" id="survey_form">
+                <div class="form_group">
+                    <label for="email" class="text_form">Email:</label>
+                    <input type="email" name="email" class="normal_input" placeholder="Scrivi qui..." required>
+                </div>
+
+                <div class="form_group">
+                    <label for="nome" class="text_form">Nome:</label>
+                    <input type="text" name="nome" class="normal_input" placeholder="Scrivi qui..." required>
+                </div>
+
+                <div class="form_group">
+                    <label for="cognome" class="text_form">Cognome:</label>
+                    <input type="text" name="cognome" class="normal_input" placeholder="Scrivi qui..." required>
+                </div>
+
+                <div class="form_group">
+                    <label for="codice_fiscale" class="text_form">Codice Fiscale:</label>
+                    <input type="codice_fiscale" name="codice_fiscale" class="normal_input" placeholder="Scrivi qui..." required>
+                </div>
+
+                <div class="form_group">
+
+                    <p class="text_form checkbox_text">Qual'é la tua piattaforma di gioco preferita? <span>(Seleziona anche piú di un'opzione)</span></p>
+                    <label class="text_radio_checkbox">
+                        <input type="checkbox" name="piattaforma_gioco_preferita" value="Playstation">Playstation
+                    </label>
+                    <br>
+                    <label class="text_radio_checkbox">
+                        <input type="checkbox" name="piattaforma_gioco_preferita" value="Xbox">Xbox
+                    </label>
+                    <br>
+                    <label class="text_radio_checkbox">
+                        <input type="checkbox" name="piattaforma_gioco_preferita" value="PC">PC
+                    </label>
+                    <br>
+                    <label class="text_radio_checkbox">
+                        <input type="checkbox" name="piattaforma_gioco_preferita" value="Nintendo
+                        ">Nintendo
+                    </label>
+                    <br>
+                    <label class="text_radio_checkbox">
+                        <input type="checkbox" name="piattaforma_gioco_preferita" value="Mobile">Mobile
+                    </label>
+
+                </div>
+
+                <div class="form_group">
+                    <button type="submit">Invia</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <!--footer-->
+    <footer>
+
+        <!--icone ipertestuali all'azienda-->
+
+        <div class="icone">
+            <a href="https://www.instagram.com/">
+                <img src="img/instragram_logo.png" alt="Instragram logo" class="icone instragram_logo">
+            </a>
+            <a href="https://www.facebook.com/">
+                <img src="img/facebook_logo.webp" alt="Facebook logo" class="icone facebook_logo">
+            </a>
+        </div>
+        <div class="chiSiamo">
+            <a href="chiSiamo.html">
+                <p>Chi Siamo</p>
+            </a>
+
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 LevelUp. Tutti i diritti sono riservati.</p>
+        </div>
+    </footer>
+
+
+
+
+</body>
+</html>

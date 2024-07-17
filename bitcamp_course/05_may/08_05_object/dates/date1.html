@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>Data</title>
+
+</head>
+<body>
+
+  <h1>La data corrente é:</h1>
+  <p id="data"></p>
+  <p id="ora"></p>
+
+  <script>
+
+    // istanzio la libreria delle date
+
+    var oggi = new Date(); 
+    var oraCorrente = new Date();
+
+    // le libreria delle date vanno instanziate e deve essere creata una
+    // variabile che le contenga, per istanziare la libreria bisogna utilizzare "new"
+
+    // interroghiamo DATE nella sua istanza per ottenere il giorno, il mese e l'anno
+
+    // How does it know your day, month and year?
+    // It takes all the info operating system has and it uses it to know the date
+
+    var giorno = oggi.getDate(); // giorno corrente del mese
+    var mese = oggi.getMonth() + 1; // mese corrente 
+    // il mese parte da 0, quindi bisogna aggiungere 1
+    var anno = oggi.getFullYear(); // anno corrente
+
+    // Crea una string con la data
+    var dataFormattata = giorno + "/" + mese + "/" + anno;
+
+    // Otteniamo l'ora corrente
+    
+    var ora = oraCorrente.getHours();
+    var minuti = oraCorrente.getMinutes();
+    var secondi = oraCorrente.getSeconds();
+
+    // crea una string con l'ora formattata
+
+    var oraFormattata = ora + ":" + minuti + ":" + secondi;
+
+    // Stampa la data
+    document.getElementById("data").innerHTML = dataFormattata;
+
+    // Stampa l'ora
+
+    document.getElementById("ora").innerHTML = oraFormattata;
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>Title</title>
+
+  <link rel="stylesheet" href="">
+
+</head>
+<body>
+
+  <h1>While Loop con input utente e operatore logico</h1>
+  <p>Inserisci un numero compreso tra 1 e 10:</p>
+  <input type="number" id="input">
+  <button onclick="verificaNumero()">Verifica</button>
+  <p id="output"></p>
+
+  <script>
+
+    function verificaNumero() {
+      var input = parseInt(document.getElementById("input").value);
+      var output = document.getElementById("output");
+
+      while (input < 1 || input > 10){
+        if (input < 1){
+                input = parseInt(prompt("Il numero inserito è troppo piccolo. Inserisci un nuovo numero"));
+            } else {
+                input = parseInt(prompt("Il numero inserito è troppo grande. Inserisci un nuovo numero"));
+
+        }
+      }
+
+
+      output.innerHTML = "Il numero inserito è " + input;
+    }
+
+
+
+  </script>
+  
+</body>
+</html>

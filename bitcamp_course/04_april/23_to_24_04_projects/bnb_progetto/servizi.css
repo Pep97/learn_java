@@ -1,0 +1,151 @@
+:root{
+    --verde-chiaro:  rgba(139, 232, 110, 0.86); /* Vecchio #7EFE2D */
+    --verde-scuro: #44A901;
+    --arancione-chiaro: #FFA000;
+    --arancione-scuro: #FF5F00;
+
+}
+
+body{
+    
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+/*Sezione nav Bar*/
+header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 0 1rem;
+    top: 0; /* Add this line to position the header at the top */
+
+    .logo{
+
+        margin: 10px;
+        margin-top: 20px;
+
+        display: flex;
+        direction: column;
+
+        img{
+            width: 50px;
+            height: 50px;
+        }
+
+        span{
+            color:white;
+            font-size: 1.5em;
+            margin: 0.5rem;
+        }
+
+    }
+
+        
+   
+
+    nav{
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10px;
+    }
+    
+    ul li {
+        display: inline;
+        margin: 0 0.7rem;
+    }
+    
+    li a {
+        color: var(--verde-chiaro);
+        text-decoration: none;
+    }
+
+    li {
+        padding: 0.5rem;
+    }
+
+    li:hover {
+        background-color: var(--arancione-chiaro);
+        border-radius: 20px;
+
+        a{
+            color: black;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    nav{
+        width: 100%;
+        justify-content: left;
+        height: 100%;
+        margin: 0px;
+        padding: -10px 0;
+        overflow: hidden;
+    
+        ul li {
+            margin: 0 0.5rem;
+        }
+    }
+
+
+
+    
+}
+
+
+
+
+
+
+/*Sezione Tabella*/
+
+img{
+    position:relative;
+    width:20px;
+    height: 20px;
+    display: inline;
+    top: 3px;
+    margin:5px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    /* border-collapse: collapse; */
+    width: 30%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 250px;
+    margin-bottom: 400px;
+}
+i{
+    margin: 5px;
+}
+
+td,
+th {
+    /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 8px;
+    cursor:pointer;
+}
+
+/* tr:nth-child(even) {
+
+    background-color: #dddddd;
+} */
+
+    /* Footer */
+    .footer {
+        background-color: black;
+        color: var(--verde-scuro);
+        text-align: center;
+        padding: 0.8em 0;
+        font-size: 1.2rem;
+      }

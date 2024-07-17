@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Il gestionale per asili nidi che stavi cercando">
+  <meta name="keywords" content="gestionale asili, gestionale asili nidi, gestione mensa asili, miglioe gestionale asili">
+  <meta name="author" content="Giuseppe Boinega"> <!-- Aggiungere tutti i nomi -->
+  
+  <title>AsiPro - Home</title>
+
+  <!-- Favicon -->
+
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
+
+  <!-- Font: Reddit Sans -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <!-- Link icone -->
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- links per recensioni -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- nostri servizi -->
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!-- bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- links per header -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+
+    <!-- link per alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+
+
+
+  
+
+</head>
+<body>
+
+   <header>
+            <div class="header-blue">
+                <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                    <div class="container"><a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo" class="img_logo"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse"
+                            id="navcol-1">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Chi siamo</a></li>
+                                <li class="nav-item dropdown"><a class="dropdown-toggle nav-link dropdown_servizi" data-toggle="dropdown" aria-expanded="false" href="#">Servizi </a>
+                                    <div class="dropdown-menu" role="menu" aria-labelledby="navbarDropdown" >
+                                        <a class="dropdown-item" role="presentation" href="#">Gestione Calendario</a>
+                                        <a class="dropdown-item" role="presentation" href="#">Gestione Presenze</a>
+                                        <a class="dropdown-item" role="presentation" href="#">Gestione Armadietto</a>
+                                        <a class="dropdown-item" role="presentation" href="#">Gestione Mensa</a>
+                                        <a class="dropdown-item" role="presentation" href="#">App Messaggistica</a>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                            
+                            <form class="form-inline mr-auto" target="_self">
+                            </form><span class="navbar-text"><a href="#" class="login" onclick="accedi()">Accedi</a></span><a class="btn btn-light action-button" role="button" href="#" onclick="registrati()">Registrati</a></div>
+                    </div>
+                </nav>
+            </div>
+   </header>
+
+  <main class="pt-2 pb-5">
+
+    <!-- section: carousel -->
+
+    <section class="main_carousel">
+
+        <div class="container mb-5"> <!-- margin-top:5 -->
+            <div id="MioCarosello" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" > 
+                <!--  data-bs-interval="3000" -> determint the time at which the image moves. time is calculated in milliseconds -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active"> 
+                        <!-- active -> this is the first image that will be shown -->
+                        <img src="img/c1.png" class="d-block w-100" alt="Prima immagine">
+                        <!-- d-block -> it occupies all the place of the container -->
+                        <!-- w-100 -> takes the full width -->
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/c2.png" class="d-block w-100" alt="Seconda immagine">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/c3.png" class="d-block w-100" alt="Terzo immagine">
+                    </div>
+    
+    
+                </div>
+                <!-- arrows to move next and back -->
+    
+                <!-- arrows on the left -->
+    
+                <button class="carousel-control-prev" type="button" data-bs-target="#MioCarosello" data-bs-slide="prev"> 
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+    
+                <!-- arrows on the right -->
+    
+                <button class="carousel-control-next" type="button" data-bs-target="#MioCarosello" data-bs-slide="next"> 
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- section: servizi -->
+
+    <section class="container pt-3 mb-3 nostri_servizi">
+        <h2 class="h3 block-title text-center">I nostri servizi</h2>
+        <div class="row pt-5 mt-30">
+            <div class="col-lg-4 col-sm-12 mb-30 pb-5">
+                <a class="card nostri_servizi_card" href="#">
+                    <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;">
+                        <i class="fa fa-calendar fa-3x head-icon"></i> <!-- Changed icon to calendar -->
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-1 nostri_servizi_testo">Gestione Calendario</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                        <span class="text-sm text-uppercase font-weight-bold nostri_servizi_testo">Scopri Servizio&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-30 pb-5">
+                <a class="card nostri_servizi_card" href="#">
+                    <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-address-book fa-3x head-icon"></i></div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-1 nostri_servizi_testo">Gestione Presenze</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                        <span class="text-sm text-uppercase font-weight-bold nostri_servizi_testo">Scopri Servizio&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-30 pb-5">
+                <a class="card nostri_servizi_card" href="#">
+                    <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;">
+                        <i class="fa fa-lock fa-3x head-icon"></i> <!-- Changed icon to locker -->
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-1 nostri_servizi_testo">Gestione Armadietto</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                        <span class="text-sm text-uppercase font-weight-bold nostri_servizi_testo">Scopri Servizio&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-30 pb-5">
+                <a class="card nostri_servizi_card" href="#">
+                    <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;">
+                        <i class="fa fa-cutlery fa-3x head-icon"></i> <!-- Changed icon to cutlery -->
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-1 nostri_servizi_testo">Gestione Mensa</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                        <span class="text-sm text-uppercase font-weight-bold nostri_servizi_testo">Scopri Servizio&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-30 pb-5">
+                <a class="card nostri_servizi_card" href="#">
+                    <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;">
+                        <i class="fa fa-envelope fa-3x head-icon"></i> <!-- Changed icon to envelope -->
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-1 nostri_servizi_testo">App Messaggistica</h3>
+                        <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                        <span class="text-sm text-uppercase font-weight-bold nostri_servizi_testo">Scopri Servizio&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- section: info form -->
+
+    <section class="info_form">
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 first_container">
+                    <h2>Prova il nostro form</h2>
+                    <p>Your text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae deleniti facere laudantium pariatur tot.
+                    </p>
+                    <a href="#" class="btn color">Vai alla pagina</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="img/immagine_info_form.png" class="img-fluid img_form" alt="Your Image">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- section: recensioni -->
+    
+    <section class="recensioni">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Guarda cosa <b>i nostri clienti</b> dicono di noi</h2>
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>   
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-sm-6 recensione">
+                                        	
+                                    </div>
+                                    <div class="col-sm-6 recensione">
+                                        
+                                    </div>
+                                </div>			
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-sm-6 recensione">
+    						
+                                    </div>
+                                    <div class="col-sm-6 recensione">
+                                        
+                                    </div>
+                                </div>			
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-sm-6 recensione">
+                                        
+                                    </div>
+                                    <div class="col-sm-6 recensione">
+                                        
+                                    </div>
+                                </div>			
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    </section>
+
+
+  </main>
+
+  <footer class="deneb_footer">
+        <div class="widget_wrapper" style="background-image: url(http://demo.tortoizthemes.com/deneb-html/deneb-ltr/assets/images/footer_bg.png);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12 center-content">
+                        <div class="widget widegt_about">
+                            <div class="widget_title">
+                                <img src="img/logo.png" class="img-fluid img_logo" alt="">
+                            </div>
+                                <p>Grazie per aver scelto il nostro sistema di gestione per asili nidi. Ci impegniamo a fornire un servizio di alta qualità per facilitare la gestione quotidiana del vostro asilo nido. Per qualsiasi domanda o assistenza, non esitate a contattarci.</p>						<ul class="social">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 center-content">
+                        <div class="widget widget_link">
+                            <div class="widget_title">
+                                <h4>Link Utili</h4>
+                            </div>
+                            <ul>
+                                <li ><a href="#">Chi Siamo</a></li>
+                                <li><a href="#">Gestione Calendario</a></li>
+                                <li><a href="#">Gestione Presenze</a></li>
+                                <li><a href="#">Gestione Armadietto</a></li>
+                                <li><a href="#">Gestione Mensa</a></li>
+                                <li><a href="#">App Messaggistica</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 center-content">
+                        <div class="widget widget_contact">
+                            <div class="widget_title">
+                                <h4>Contattaci</h4>
+                            </div>
+                            <div class="contact_info">
+                                <div class="single_info">
+                                    <div class="icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <div class="info">
+                                        <p>+39 924-614-7999</a></p>
+                                    </div>
+                                </div>
+                                <div class="single_info">
+                                    <div class="icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="info">
+                                        <p><a href="mailto:info@deneb.com">info@deneb.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="single_info">
+                                    <div class="icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="info">
+                                        <p>Via Aldo Moro, 20</p>
+                                        <p>20452 Milano(MI)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright_text">
+                            <p>Copyright &copy; 2020 All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </footer>
+
+  <!-- scripts per header -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+  
+  
+  <!-- scripts JS -->
+
+  <script src="script.js"></script>
+
+  
+</body>
+</html>

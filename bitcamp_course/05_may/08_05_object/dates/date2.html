@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>Title</title>
+
+  <link rel="stylesheet" href="">
+
+</head>
+<body>
+
+    <h1>Il giorno della settimana corrente é:</h1>
+    <p id="giorno"></p>
+
+  <script>
+
+    var dataCorrente = new Date(); // istanzio la libreria delle date
+    
+    var giorno = dataCorrente.getDay(); // giorno della settimana corrente
+    // 0 = Domenica, 1 = Lunedì, 2 = Martedì, 3 = Mercoledì, 4 = Giovedì, 5 = Venerdì, 6 = Sabato
+
+    // array con i nome dei giorni della settimana
+    var nomiGiorni = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
+    var nomeGiorno = nomiGiorni[giorno];
+
+    document.getElementById("giorno").innerHTML = nomeGiorno;
+
+    /* versione automatica della conversione senza scrivere un array
+    
+    var dataCorrente = new Date(); // istanzio la libreria delle date
+
+    var nomeGiorno = dataCorrente.toLocaleDateString('it-IT', { weekday: 'long' });
+
+    console.log(nomeGiorno);
+    */
+
+
+
+  </script>
+  
+</body>
+</html>

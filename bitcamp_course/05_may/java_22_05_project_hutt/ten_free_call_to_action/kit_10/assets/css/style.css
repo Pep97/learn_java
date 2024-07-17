@@ -1,0 +1,65 @@
+:root{
+    --primary_font: 'Montserrat', sans-serif;
+    --secondary_font: 'Poppins', sans-serif;
+
+    --primary_color: #FBFCFF;
+    --secondary_color: #16064F;
+}
+
+/* Call To Action Start */
+.d2c_c2a_wrapper {
+    background: url(../image/bg_image.png), rgba(0, 0, 0, 0.88);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding: 80px 0px 100px;
+} 
+h2 {
+    color: var(--primary_color);
+    font-family: var(--primary_font);
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+p {
+    font-family: var(--primary_font);
+    color: var(--primary_color);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.btn {
+    border-radius: 62px;
+    background: var(--primary_color);
+    padding: 14px 50px 13px;
+}
+.btn:hover {
+    background: var(--primary_color);
+}
+.btn:active {
+    background: var(--primary_color) !important;
+}
+.d2c_c2a_btn i {
+    font-size: 30px;
+}
+.d2c_c2a_btn p {
+    color: var(--secondary_color);
+    font-family: var(--secondary_font); 
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+}
+/* Call To Action End */
+
+
+
+/* 
+    Template Name: {{10+ Free Website Call To Action | Bootstrap UI Kits}}
+    Template URL: {{https://designtocodes.com/product/10-free-website-call-to-action}}
+    Description: {{Are you struggling to craft CTAs that capture attention and inspire action? Check out our 10+ free website Call To Action now!}}
+    Author: DesignToCodes
+    Author URL: https://www.designtocodes.com
+    Text Domain: {{Call To Action | Bootstrap UI Kits}}
+*/

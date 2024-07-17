@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url(img/reception.jpeg) fixed;
+    background-size: cover; /* this is to cover the whole screen */
+    color: #333;
+}
+
+header{
+    text-align: center;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 50px;
+}
+
+nav{
+    text-align: center;
+    background-color: #333;
+    padding: 10px;
+
+    a{
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+    }
+}
+
+form{
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+
+    label{
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input{
+        width: 97%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        
+
+
+    }
+
+    button{
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+section{
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    margin: 20px;
+
+    h2{
+        color: #333;
+    }
+
+    ul{
+        list-style: none;
+        /* this will remove the bullet points from the list */
+        padding: 0;
+    }
+
+    li{
+        margin-bottom: 10px;
+    }
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+}
+

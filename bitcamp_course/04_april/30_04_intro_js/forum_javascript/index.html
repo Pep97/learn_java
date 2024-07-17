@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Javascript</title>
+</head>
+<body>
+
+
+        <label for="nome">Inserisci il tuo nome:</label>
+        <input type="text" id="nome" name="nome">
+        <button onclick="mostraNome()">Visualizza il nome</button>
+        <hr>
+        <p id="output"></p>
+
+        <br>
+        <br>
+     
+
+    <!-- creare una pagina web, chiedere 2 valori ad un utente in un paragrafo fa vedere risultato somma -->
+
+
+    <label for="val1">Valore 1 :</label>
+    <input type="text" id="val1" name="val1">
+
+    <label for="val2">Valore 2 :</label>
+    <input type="text" id="val2" name="val2">
+
+    <button onclick="calcola()">Somma</button>    
+    <hr>
+    <p id="risultato"></p>
+
+    <script>
+        
+        function mostraNome(){
+            // take the value of the input
+            var nome = document.getElementById('nome').value;
+            // document.write("Il tuo nome é " + nome);
+            document.getElementById('output').innerHTML = "Il tuo nome é " + nome;
+        }
+        
+    
+
+        function calcola(){
+            var val1 = parseFloat(document.getElementById('val1').value);
+            var val2 = parseFloat(document.getElementById('val2').value);
+            // parseInt() trasforma una stringa in un numero intero
+            // parseFloat() trasforma una stringa in un numero decimale
+
+            // why not always use parseFloat()?
+            // because it takes more memory
+
+            var risultato = val1 + val2;
+            document.getElementById('risultato').innerHTML = "Il risultato é " + risultato;
+        }
+
+    </script>
+
+
+    
+</body>
+</html>

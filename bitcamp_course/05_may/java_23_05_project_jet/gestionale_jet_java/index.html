@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Mattia Bascelli"> <!-- Aggiungere tutti i nomi -->
+  
+  <title>Homepage</title>
+
+  <!-- Favicon -->
+
+  <link rel="icon" href="img/logo_hutt.png" type="image/x-icon">
+
+  <!-- Font: Reddit Sans -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <!-- Link icone -->
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- sezione servizi -->
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <link href="src/stile.css" rel="stylesheet" type="text/css">
+
+    <style>
+        #radius {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light pt-3 pb-3">
+        <div class="container-xxl">
+        <!-- navbar brand / title -->
+        <a class="navbar-brand" href="#home" style="color: white;">
+            <img src="img/logo_hutt.png" alt="logo Image" width="60" height="60" style="margin-right: 10px;">
+            JAVVA THE HUTT
+        </a>
+        <!-- toggle button for mobile nav -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- navbar links -->
+        <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#home" style="color: white;">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="src/progetto.html" style="color: white;">Progetto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="src/guidaUtente.html" style="color: white;">Guida Utente</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="src/portfolio.html" style="color: white;">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="src/contatti.html" style="color: white;">Contatti</a>
+            </li>          
+            </ul>
+        </div>
+        </div>
+    </nav>
+    
+
+
+    <main class="mt5 mb5 pt5 pb5">
+
+    <!-- Hero section -->
+
+    <section class="hero_section">
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 first_container">
+                    <h2>VOLA DI LUSSO CON IL NOSTRO GESIONALE!</h2>
+                    <p>Prenotazionei in pochi Click, gestione clienti e tante altre features sempre in aggioranmento.
+                    </p>
+                    <a href="src/codiceJava.zip" class="btn color">Scarica Codice</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="img/pilotaJet.jpg" class="img-fluid img_form" alt="pilotaJet" id="radius">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Sezione funzionatalitá -->
+
+    <section class="container pt-5 pb5 funzionalita">
+        <div class="container">
+            <h2 class="h3 block-title text-center">I nostri servizi</h2>
+            <div class="row pt-5 mt-30">
+                <div class="col-lg-4 col-sm-12 mb-30 pb-5 card_funzionalita">
+                    <div class="card nostri_servizi_card">
+                        <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;">
+                            <i class="fa fa-plus fa-3x head-icon"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title pt-1 nostri_servizi_testo">Crea il tuo Hangar</h3>
+                            <p class="card-text">Aggiungi in modo semplice ed efficace tutti i veivoli nel tuo Hungar. Potrai inserire tutti le specifiche per scegliere al meglio anche il suo equipaggio.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 mb-30 pb-5 card_funzionalita">
+                    <div class="card nostri_servizi_card">
+                        <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-check fa-3x head-icon"></i></div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title pt-1 nostri_servizi_testo">Password di Sicurezza</h3>
+                            <p class="card-text">Solo i tuoi dipendenti potranno accedere al software mediante l'utilizzo di un Id e una password.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 mb-30 pb-5 card_funzionalita">
+                    <div class="card nostri_servizi_card">
+                        <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;">
+                            <i class="fa fa-exchange fa-3x head-icon"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title pt-1 nostri_servizi_testo">Gestione Noleggio</h3>
+                            <p class="card-text">Compila passo passo le richieste del software per avere delle prenotazioni perfette complete di tutti i dettagli.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 mb-30 pb-5 card_funzionalita">
+                    <div class="card nostri_servizi_card">
+                        <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;">
+                            <i class="fa fa-search fa-3x head-icon"></i> 
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title pt-1 nostri_servizi_testo">Ricerca dei Noleggi</h3>
+                            <p class="card-text">Ricerca dei noleggi con tutti i dettagli. Inclusi i Servizi EXTRA.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 mb-30 pb-5 card_funzionalita">
+                    <div class="card nostri_servizi_card">
+                        <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;">
+                            <i class="fa fa-search-plus fa-3x head-icon"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title pt-1 nostri_servizi_testo">Ricerca Cliente con storico dei noleggi</h3>
+                            <p class="card-text">Tutte le informazioni sui propri clienti. Ordinate e ben visibili sul tuo schermo!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 mb-30 pb-5 card_funzionalita">
+                    <div class="card nostri_servizi_card">
+                        <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;">
+                            <i class="fa fa-eye fa-3x head-icon"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title pt-1 nostri_servizi_testo">Visualizza Il tuo Hangar</h3>
+                            <p class="card-text">Tieni sott'occhio sempre la disponibilità dei tuoi veivoli, così da consigliare sempre al meglio i tuoi clienti.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- call to action -->
+
+    <section class="call_to_action">
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="img/call_to_action.png" class="img-fluid img_form" alt="Illustazione di una persona con dei file">
+                </div>
+                <div class="col-md-6 first_container">
+                    <h2>Scopri il nostro progetto!</h2>
+                    <p>Scarica il nostro codice e testalo liberamente. Condividi le tue opinioni con il nostro team!
+                    </p>
+                    <a href="#" class="btn color">Scarica Codice</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    </main>
+
+
+    <footer
+          class="text-center text-lg-start text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">
+                        <img src="img/logo_hutt.png" alt="logo Image" width="60" height="60" style="margin-right: 10px;">
+                        Java the Hutt
+                    </h6>
+                    <p>
+                    Siamo il team di Bitcamp formato da L. Tassiello, M. Bascelli, G. Boinega, V. Barone, G. De Marzo, R. Bucco.
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Pagine</h6>
+                    <p>
+                    <a class="text-white" href="index.html">Home</a>
+                    </p>
+                    <p>
+                    <a class="text-white" href="src/progetto.html">Progetto</a>
+                    </p>
+                    <p>
+                    <a class="text-white" href="src/guidaUtente.html">Guida Utente</a>
+                    </p>
+                    <p>
+                    <a class="text-white" href="src/portfolio.html">Portfolio</a>
+                    </p>
+                    <p>
+                    <a class="text-white" href="src/contatti.html">Contatti</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">
+                    Link Utili
+                    </h6>
+                    <p>
+                    <a class="text-white" href="#">Disclaimer Prodotto</a>
+                    </p>
+                    <p>
+                    <a class="text-white" href="#">Informazioni Legali</a>
+                    </p>
+                    
+                </div>
+
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                    <p><i class="fas fa-home mr-3"></i> Firenze, Via Marco Polo 12, IT</p>
+                    <p><i class="fas fa-envelope mr-3"></i> javathehutt@gmail.com</p>
+                    <p><i class="fas fa-phone mr-3"></i> + 39 234 567 88</p>
+                </div>
+                <!-- Grid column -->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="my-3">
+
+            <!-- Section: Copyright -->
+            <section class="p-3 pt-0">
+                <div class="row d-flex align-items-center">
+                <!-- Grid column -->
+                <div class="col-md-7 col-lg-8 text-center text-md-start">
+                    <!-- Copyright -->
+                    <div class="p-3">
+                    © 2024 Copyright: Java the Hutt
+                    </div>
+                    <!-- Copyright -->
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                    <!-- Facebook -->
+                    <a
+                    class="btn btn-outline-light btn-floating m-1"
+                    class="text-white"
+                    role="button"
+                    ><i class="fab fa-facebook-f"></i
+                    ></a>
+
+                    <!-- Twitter -->
+                    <a
+                    class="btn btn-outline-light btn-floating m-1"
+                    class="text-white"
+                    role="button"
+                    ><i class="fab fa-twitter"></i
+                    ></a>
+
+                    <!-- Instagram -->
+                    <a
+                    class="btn btn-outline-light btn-floating m-1"
+                    class="text-white"
+                    role="button"
+                    ><i class="fab fa-instagram"></i
+                    ></a>
+                </div>
+                <!-- Grid column -->
+                </div>
+            </section>
+            <!-- Section: Copyright -->
+        </div>
+    </footer>
+
+
+</body>
+</html>

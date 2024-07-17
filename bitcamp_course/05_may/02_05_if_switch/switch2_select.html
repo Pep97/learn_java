@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>Switch select</title>
+
+  <link rel="stylesheet" href="">
+
+</head>
+<body>
+
+
+
+  <main>
+
+    <h1>Menú a tendina con switch</h1>
+    <label for="menu">Seleziona una voce:</label>
+    <select id="menu">
+        <option value="----">Seleziona</option>
+        <option value="home">HOME</option>
+        <option value="prodotti">PRODOTTI</option>
+        <option value="servizi">SERVIZI</option>
+        <option value="contatti">CONTATTI</option>
+    </select>
+    <button onclick="seleziona()">Seleziona</button>
+  </main>
+
+
+
+  <script>
+
+    function seleziona(){
+
+        var menu = document.getElementById('menu');
+        var scelta = menu.value;
+
+        switch(scelta){
+            case "home":
+                alert("Hai selezionato la voce Home");
+                break;
+            case "prodotti":
+                alert("Hai selezionato la voce Prodotti");
+                break;
+            case "servizi":
+                alert("Hai selezionato la voce Servizi");
+                break;
+            case "contatti":
+                alert("Hai selezionato la voce Contatti");
+                break;
+            default:
+                alert("Selezione non valida");
+        }
+    }
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+:root {
+    /* Font */
+    --primary_font: 'Montserrat', sans-serif;
+    --secondary_font: 'Poppins', sans-serif;
+    /* Color */
+    --primary_color: #177ACD;
+    --secondary_color: #2E3845;
+    --accent_color: #FBFCFF;
+    --text_color: #686B6F;
+}
+
+.d2c_c2a_wrapper {
+    padding: 100px 0px 0px;
+    position: relative;
+    background: #177acd05;
+}
+h2 {
+    color: var(--secondary_color);
+    font-family: var(--primary_font);
+    font-size: 47px;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 40px;
+}
+h2 span {
+    color: var(--primary_color);
+    font-weight: 700;
+}
+h2::after {
+    content: '';
+    position: absolute;
+    background: var(--primary_color);
+    opacity: 0.4;
+    width: 124px;
+    height: 1px;
+    bottom: -21px;
+    left: 0;
+}
+p {
+    color: var(--text_color);
+    font-family: var(--primary_font);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+.btn {
+    padding: 12px 50px 11px;
+    color: var(--accent_color);
+    font-family: var(--secondary_font);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border: 1px solid var(--primary_color);
+    border-radius: 100px;
+    background: var(--primary_color);
+    transition: all ease 0.4s;
+}
+.btn:hover {
+    background: transparent;
+    color: var(--primary_color);
+    border: 1px solid var(--primary_color);
+    transition: all ease 0.4s;
+}
+.btn:active {
+    background: transparent !important;
+    color: var(--primary_color) !important;
+    border: 1px solid var(--primary_color) !important;
+    transition: all ease 0.4s;
+}
+.d2c_c2a_wrapper img:nth-child(2) {
+    position: absolute;
+    top: 75px;
+    left: 100px;
+}
+.d2c_c2a_wrapper img:nth-child(3) {
+    position: absolute;
+    top: 140px;
+    right: 0;
+}
+
+
+
+/* 
+    Template Name: {{10+ Free Website Call To Action | Bootstrap UI Kits}}
+    Template URL: {{https://designtocodes.com/product/10-free-website-call-to-action}}
+    Description: {{Are you struggling to craft CTAs that capture attention and inspire action? Check out our 10+ free website Call To Action now!}}
+    Author: DesignToCodes
+    Author URL: https://www.designtocodes.com
+    Text Domain: {{Call To Action | Bootstrap UI Kits}}
+*/

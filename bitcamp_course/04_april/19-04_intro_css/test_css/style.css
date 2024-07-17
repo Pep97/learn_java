@@ -1,0 +1,127 @@
+body {
+    background-image: url(https://via.placeholder.com/1920/1080);
+    background-attachment: fixed; 
+    /* in this way you fixed your background and it won't roll inside the elemnents of your page */
+    background-size: cover;
+    /* in this way you forced the image to cover all display */
+    background-repeat: no-repeat;
+    /* in this way you forced the image to stay in your display, and if it is smaller it will get bigger.
+    to don't repeat the image */
+    margin:0; /* margin: 0 0 0 0; top, right, bottom, left 
+    you can also do margin: 0 0 0; in this case it will be read as top, right, bottom*/
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh; /* in this way our background will adapt to the screen of the user. */
+    overflow: auto; 
+    /* overflow -> used to specify what should happen if content overflows an element's box.
+    auto -> value means the browser will automatically provide scrollbars when necessary. This happens when the content is larger than the container. */
+}
+
+header{
+    background-color: #fff;
+    /* search "paletta colore decimale */
+    color: orange;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.newsletter{
+    background-color: #fff;
+    color: #333;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.548);
+    /* horizontal, vertical, shadow*/
+}
+
+.carousel{
+    background-color: grey;
+    color: orange;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    
+
+    /* 
+    img{
+    width: 50%;
+    height: 50%;
+    } 
+    */
+}
+
+.carousel img{
+    width: 90%;
+    height: 60%;
+    margin: 20px;
+    /* here you put the animation */
+    animation: slide 5s infinite;
+
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(110%);
+    }
+    45%{
+        transform: translateX(110%);
+    }
+    50%{
+        transform: translateX(200%);
+    }
+    70%{
+        transform: translateX(200%);
+    }
+    75%{
+        transform: translateX(300%);
+    }
+    95%{
+        transform: translateX(300%);
+    }
+    100%{
+        transform: translateX(400%);
+    }
+}
+
+.shopping_cart{
+    background-color: #fff;
+    color: #333;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.548);
+
+    h2{
+        text-align: center;
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        /* this will create a unique boarder, rather than a double border */
+
+        th, td{
+            /* border: 1px solid #333; */
+            padding: 10px;
+            text-align: left;
+        }
+
+        th{
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr{
+            &:nth-child(even){ /* this will select all child that are even (pari) */
+                background-color: #f2f2f2;
+            } 
+        }
+    }
+
+}

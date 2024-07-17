@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- this meta tag make the website responsive also on mobile -->
+    <meta name="description" content="Homepage Studio Medico Bitcamp">
+    <meta name="keywords" content="studio medico, prenotazione appentamenti, servizu medici">
+    <meta name="author" content="Classe Bitcamp">
+    <title>Studio Medico</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Github doesn't support JAVA databases, only PHP -->
+    
+</head>
+<body>
+
+    <header>
+        <h1>Studio Medico Bitcamp</h1>
+        <p>La tua salute é la nostra prioritá</p>
+    </header>
+
+    <!-- Navbar -->
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Chi Siamo</a>
+        <a href="#">Servizi</a>
+        <a href="informazioni_aggiuntive.html">Informazioni Aggiuntive</a>
+        <a href="#">Contatti</a>
+    </nav>
+
+    <!-- Form per gestione appuntamenti -->
+
+    <form>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <br>
+
+        <label for="data">Data dell'appuntamento:</label>
+        <input type="date" id="data" name="data" required>
+
+        <br>
+
+        <label for="ora">Ora dell'appuntamento:</label>
+        <input type="time" id="ora" name="ora" required>
+
+        <br>
+
+        <button type="button" onclick="aggiungi_dati()">Prenota appuntamento</button>
+    </form>
+
+    <!--  studio medico per ogni appuntamento inserito venga riportato all'interno di una tabella -->
+
+    <section>
+        <h2>Orari giá prenotati</h2>
+        <table id="inserimento_dati">
+                <tr>
+                    <th>Nome</th>
+                    <th>Data</th>
+                    <th>Ora</th>
+                </tr>
+        </table>
+    </section>
+
+    <script>
+
+        function aggiungi_dati(){
+
+            // recupera i dati inseriti
+            var nome = document.getElementById('nome').value;
+            var data = document.getElementById('data').value;
+            var ora = document.getElementById('ora').value;
+    
+            // Creazione di variable con puntamento al tbody
+    
+            var inserimento_dati = document.getElementById('inserimento_dati');
+    
+            // Creare una nuova riga nella tabella
+            var riga = document.createElement("tr");
+    
+            // Crea colonne
+            var colonna_nome = document.createElement("td");
+            var colonna_data = document.createElement("td");
+            var colonna_ora = document.createElement("td");
+    
+            // Valorizziamo le celle con i valori presi dal form
+            colonna_nome.innerText = nome; 
+            colonna_data.innerText = data; 
+            colonna_ora.innerText = ora;
+    
+            // Aggiunta delle celle alla riga
+
+            riga.appendChild(colonna_nome); 
+            riga.appendChild(colonna_data); 
+            riga.appendChild(colonna_ora);
+    
+            // Aggiunta della riga alla tabella
+    
+            inserimento_dati.appendChild(riga);
+    
+            // Pulizia dei campi del form
+
+            document.getElementById('nome').value = "";
+            document.getElementById('data').value = "";
+            document.getElementById('ora').value = "";
+
+        }
+
+
+    </script>
+
+
+    <!-- Sezione per elencare i servizi dello studio -->
+
+    <section>
+        <h2>Servizi Offerti</h2>
+        <ul>
+            <li>Medicina Generale</li>
+            <li>Pediatria</li>
+            <li>Cardiologia</li>
+            <li>Dermatologia</li>
+            <li>Portopedia</li>
+        </ul>
+    </section>
+
+    <!-- Sezione informazioni studio -->
+
+    <section>
+        <h2>Chi Siamo</h2>
+        <p>Lo studio Medico Bitcamp si impegna a fornire servizi medici di alta qualitá per migliorare la salute e il benessere dei propri studenti di programmazione.</p>
+    </section>
+
+    <!-- Sezione dei contatti -->
+
+    <section>
+        <h2>Contatti</h2>
+        <p>Indirizzo: Via delle Cure, 123 - 00123 Roma</p>
+        <p>Email: info@studiomedicobit.it</p>
+        <p>Telefono: 0123-456789</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Studio Medico Bitcamp. Tutti i diritti sono riservati.</p>
+    </footer>
+</body>
+</html>
+

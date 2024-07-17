@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contatti Coffee House">
+  <meta name="keywords" content="Assistenza Coffee House, Contatta Coffee House, caffe, caffé online">
+  <meta name="author" content="Giuseppe Boinega, Giuseppe Giordano, Roberto book">
+
+  <link rel="stylesheet" href="styles.css">
+  <title>Coffee House</title>
+
+   <!-- Icona per logo -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/caffee_favicon.png">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Karla:wght@400;700&family=Lora&family=Montserrat:wght@100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <style>
+    header{
+      position: fixed;
+      top: 0;
+    }
+
+    h2{
+      margin-top: 140px;
+    }
+
+    h2, h3, p{
+        margin-left:20px;
+    }
+
+    form{
+        margin:30px;
+    }
+
+    input{
+      margin: 15px;
+    }
+
+    .last{
+      margin-bottom: 70px;
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+  <!-- Header con navbar e logo -->
+
+    <header>
+    <span><i class='bx bx-coffee-togo'></i> Coffee House</span>
+    <nav>
+                
+            <ul>
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+                <li>
+                  <a href="menu.html">Menu</a>
+                </li>
+                <li>
+                  <a href="chi_siamo.html">Chi Siamo</a>
+                </li>
+                <li>
+                  <a href="contatti.html">Contatti</a>
+                </li>
+                <li>
+                  <a href="prenotazioni.html">Prenotazioni</a>
+                </li>
+            </ul>
+
+      </nav>
+  
+  
+    </header>
+
+
+        <h2>
+            Compila il seguente form per ricevere qualsiasi tipo di informazione sui nostri servizi.
+        </h2>
+        <form>
+            <label for="name">Nome Utente:</label>
+            <input type="name" id="nome" name="nome" required />
+            <br/>
+            
+        
+            <label for="email">Email dell'Utente:</label>
+            <input type="email" id="email" name="email" required />
+            <br/>
+        
+            <label for="object">Oggetto:</label>
+            <input type="object" id="oggetto" name="oggetto" required />
+            <br/>
+    
+            <label for="messaggio">Messaggio:</label>
+            <textarea id="messaggio" name="messaggio" cols="20" rows="15"></textarea>
+            <br/>
+    
+            <button type="submit">Invia</button>
+         </form> 
+
+
+            <!--Elenco dei Contatti-->
+        <h3>Contatti</h3>
+        <p>Indirizzo: Via delle Rosa, 112 - 10125 Roma</p>
+        <p>Email: info@coffeehouse.it</p>
+        <p class="last">Telefono: 0131-466219</p>
+
+
+  <!-- Footer -->
+
+
+    <footer>
+        <p>&copy; 2024 Coffe House. Tutti i diritti sono riservati.</p>
+    </footer>
+    
+</body>
+</html>

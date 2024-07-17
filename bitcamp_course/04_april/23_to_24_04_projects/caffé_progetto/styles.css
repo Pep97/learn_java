@@ -1,0 +1,438 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: poppins, arial;
+
+}
+
+/* Header e navbar */
+
+header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 0 1rem;
+    
+
+    span{
+        color:white;
+        margin: 0.5rem;
+    }
+
+    nav{
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10px;
+    }
+    
+    ul li {
+        display: inline;
+        margin: 0 0.7rem;
+    }
+    
+    li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    li {
+        padding: 0.5rem;
+    }
+
+    li:hover {
+        background-color: white;
+        border-radius: 20px;
+
+        a{
+            color: black;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    nav{
+        width: 100%;
+        justify-content: left;
+        height: 100%;
+        margin: 0px;
+        padding: -10px 0;
+        overflow: hidden;
+    
+        ul li {
+            margin: 0 0.5rem;
+        }
+    }
+
+
+
+    
+}
+
+
+
+
+
+.main_image{
+    height: 80%;
+    width: 80%;
+}
+
+/* slide Immagini principali */
+
+.slider-container {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative; 
+    animation: 0.4s 0.2s both fadeIn;
+
+    background-attachment: fixed; 
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.slide {
+ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    animation: 12s linear infinite sliderAnimation;
+    box-sizing: border-box; /* to keep total width at 100% */
+    display: flex; /* to position the text inside*/
+}
+
+    .slide:first-of-type {
+        background: no-repeat 50% 20%/cover url('img/sfondoCoffeeHouse.jpg');
+        /* positioning for the text inside */
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .slide:nth-of-type(2) {
+        background: no-repeat center/cover url('img/sfondoCoffeeHouse2.jpg');
+        /* 12s - 9s = 3s... Will start after 3s */
+        animation-delay: -9s;
+    }
+
+    .slide:nth-of-type(3) {
+        background: no-repeat center/cover url('img/sfondoCoffeeHouse3.jpg');
+        /* 12s - 9s = 3s... Will start after 3s */
+        animation-delay: -6s;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .slide:nth-of-type(4) {
+        background: no-repeat center/cover url('img/sfondoCoffeeHouse4.jpg');
+        /* 12s - 9s = 3s... Will start after 3s */
+        animation-delay: -3s;
+        justify-content: center;
+        align-items: center;
+    }
+
+@keyframes sliderAnimation {
+    /* 4 slides, 20% in place and 5% transition time = 100% */
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    /* starts in view */
+    20% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    /* stays in view */
+    25% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+    /* slides out left */
+    70% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    /* Doesn't matter at what percent: changes to transparent so can't see it travel back across to the right. */
+    71% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    /* Doesn't matter at what percent: moves off right */
+    95% {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+    /* Becomes transparent and Ready to slide on from the right */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+}
+
+/* Introduzione */
+
+.introduzione{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2em 1rem;
+
+    .contenitore .immagine_caffee{
+        flex-basis: 50%;
+        width: 100%;
+    }
+
+    .contenitore{
+        margin: 0 4rem;
+        width: 60%;
+        max-width: 100%;
+        font-size: 1rem;
+        background-color: blanchedalmond;
+        color: black;
+        border-radius: 10px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .introduzione {
+        flex-direction: column;
+        height: auto;
+        padding: 2em 0;
+        
+
+        .contenitore {
+            margin: 30px auto;
+            width: 90%;
+            height: auto;
+        }
+    
+        img{
+            width: 85%;
+            height: 85%;
+        
+        }
+    }
+
+
+    
+}
+
+@media screen and (max-width: 320px) {
+    .introduzione {
+    
+        img{
+            width: 90%;
+            height: 90%;
+            margin-bottom: 30px;
+        
+        }
+    }
+
+
+    
+}
+
+/* Controlla il menú con immagini */
+
+
+.controlla_menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2{
+        text-align: center;
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+
+    button, a{
+        background-color: black;
+        color: white;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1rem;
+    }
+    div{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+        
+
+        img{
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+
+            margin: 3em 3em;
+        }
+    }
+}
+
+/* sezione contattaci */
+
+.contattaci{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 2em 1rem;
+
+    .contatti_informazioni{
+        flex-basis: 50%;
+        width: 100%;
+
+        h2{
+            text-align: center;
+            font-size: 2rem;
+            margin: 2rem 0;
+        
+        }
+    }
+
+    .canali_social{
+        flex-basis: 50%;
+        width: 100%;
+
+        img{
+            margin-right: 10px;
+            width: 45px;
+            height: 45px;
+            border-radius: 5px;
+            cursor: pointer;
+
+            .facebook_logo{
+                width: 54px;
+                height: 54px;
+                
+            }
+    
+            .instagram_logo{
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+ 
+    }
+
+
+
+}
+
+@media screen and (max-width: 690px) {
+    .contattaci {
+        flex-direction: column;
+        height: auto;
+        
+
+        .contatti_informazioni {
+            margin: 30px auto;
+            width: 90%;
+            height: auto;
+        }
+    
+        .canali_social {
+            margin: 30px auto;
+            width: 90%;
+            height: auto;
+        }
+    }
+    
+}
+
+
+
+/* Footer */
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.8em 0;
+}
+
+/* menú */
+
+.menu_container{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+   
+ }
+ 
+
+.menu{
+    width:100%;
+    display:flex;
+    align-content:center;
+    justify-content:center;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 25%;
+    display:inline;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.item{
+    cursor:pointer;
+}
+.item:hover{
+    background:#11eadd;
+}
+
+@media screen and (max-width:970px){
+    .menu{
+
+        flex-direction:column;
+        align-items: center;
+
+
+    }
+    #dessert{
+        margin-top:30px;
+    }
+} 
+
+

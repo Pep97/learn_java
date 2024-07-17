@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- exercises 
+
+    Variables and Data Types:
+    Declare a variable name and assign your name to it.
+    Declare a variable age and assign your age to it.
+    Log both variables using console.log().
+
+    Strings:
+    Concatenate two strings and log the result.
+    Find the length of a string.
+
+    Arrays:
+    Create an array of your favorite foods.
+    Add another food at the end of this array.
+    Remove the first food from the array.
+
+    Objects:
+    Create an object person with properties name and age.
+    Add a new property city to the person object.
+
+    Functions:
+    Write a function greet that takes a name as an argument and logs a greeting message.
+    
+    Loops:
+    Write a for loop that logs numbers from 1 to 10.
+    Write a while loop that logs numbers from 10 to 1.
+    Conditionals:
+
+    Write an if statement that checks if a number is even or odd.
+
+    -->
+
+    <!-- custom exercises -->
+
+    <script>
+
+        const name = "Giuseppe";
+        const age = 26;
+
+        console.log(`Ciao, mi chiamo ${name} e ho ${age} anni.`);
+        console.log("Ciao, mi chiamo " + name + " e ho " + age + " anni.");
+
+        const string = "Ciao ";
+        const string2 = "come stai?";
+
+        const concat = string.concat(string2);
+        console.log(concat);
+
+        const length = concat.length;
+        console.log(length);
+
+        const foods = ["pasta", "pizza", "hamburger", "sushi"];
+        foods.push("tacos", "burritos");
+
+        console.log(foods);
+
+        foods.pop(); // removes the last element
+        foods.shift(); // removes the first element
+
+        console.log(foods); // ["pizza", "hamburger", "sushi", "tacos"]
+
+        foods[2] = "fish"; // replace a specific element
+
+        console.log(foods); // ["pizza", "hamburger", "fish", "tacos"]
+
+        const person = {
+            name: "Giuseppe",
+            age: 26
+        }
+
+        // Using the dot notation
+        person.job = "Developer";
+
+        // Using the bracket notation
+        person["city"] = "Rome";
+
+        console.log(person);  // Outputs: {name: "Giuseppe", age: 26, job: "Developer", city: "Rome"}
+
+
+
+    </script>
+
+    
+</body>
+</html>

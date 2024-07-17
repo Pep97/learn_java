@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>Generatore numeri</title>
+
+  <link rel="stylesheet" href="">
+
+</head>
+<body>
+
+    <h1>Generazione di un numero casuale pari</h1>
+
+
+
+  <script>
+
+    var randomNumber;
+    var ePari = false; // flag booleano
+    var contatore = 0;
+
+    do {
+
+        contatore++;
+        // estrazione di un numero casuale
+        randomNumber = Math.floor(Math.random() * 100);
+        // random() restituisce un numero casuale compreso tra 0 e 1
+
+        if(randomNumber % 2 == 0) {
+            ePari = true;
+        }
+        
+    } while(!ePari);
+    
+    document.write("Il numero casuale pari generato è: " + randomNumber + " in " + contatore + " tentativi." );
+ 
+ </script>
+  
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>Title</title>
+
+  <link rel="stylesheet" href="">
+
+</head>
+<body>
+
+  <header>  
+  </header>
+
+  <main>
+
+    <!-- Confronto di 2 numeri interi -->
+
+
+    <h1>Confronto di due numeri</h1>
+    <p>Inserisci il numero 1:</p>
+    <input type="number" id="num1">
+    <br>
+    <p>Inserisci il numero 2:</p>
+    <input type="number" id="num2">
+    <br>
+    <br>
+    <button onclick="compare()">Confronta</button>
+    <hr>
+    <p id="output"></p>
+
+
+  </main>
+
+  <footer>
+  </footer>
+
+  <script>
+
+    /* what you did 
+    
+    function compare(){
+    
+        num1 = parseInt(document.getElementById('num1').value);
+        num2 = parseInt(document.getElementById('num2').value);
+    
+        let result = "";
+    
+        if( num1 === num2){
+            result = "I numeri sono uguali";
+        } else if (num1 > num2){
+            result = `${num1} é maggiore di ${num2}`
+        } else {
+            result = `${num2} é maggiore di ${num1}`
+        }
+    
+        document.getElementById('output').innerHTML = result;
+    
+    }
+    */
+
+    function compare(){
+
+    
+        
+        num1 = parseInt(document.getElementById('num1').value);
+        num2 = parseInt(document.getElementById('num2').value);
+
+        //console.log("num1 " + num1 + " num2 " + num2);
+        // if the user doesn't insert any number, the value is NaN
+        // isNaN() is a function that checks if the value is not a number
+        // if the value is not a number, the function returns true
+
+        if (isNaN(num1) || isNaN(num2)){
+            alert("Inserisci entrambi i numeri")
+        } else if( num1 > num2){
+            document.getElementById('output').innerHTML = `${num1} é maggiore di ${num2}`
+        } else if( num1 < num2){
+            document.getElementById('output').innerHTML = `${num1} é minore di ${num2}`
+        } else {
+            document.getElementById('output').innerHTML = "I numeri sono uguali"}
+            
+    }
+
+  </script>
+  
+</body>
+</html>

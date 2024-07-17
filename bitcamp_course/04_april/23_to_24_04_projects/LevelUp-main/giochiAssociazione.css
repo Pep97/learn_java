@@ -1,0 +1,170 @@
+﻿body {
+    width: 100%;
+    height:100vh;
+    background-image: linear-gradient(45deg, rgba(165, 162, 162, 0.7), rgba(165, 162, 162, 0.7)), url(img/immagine_form_iscrizione.jpg);
+    background-attachment: fixed; /* This makes the background image stay still while scrolling */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: "Carrois Gothic SC", sans-serif;
+    text-align:center;
+}
+.carrois-gothic-sc-regular {
+    font-weight: 400;
+    font-style: normal;
+}
+/*HEADER*/
+header {
+    display: flex;
+    align-items: center;
+    background-color: rgba(13,12,12,1);
+    color: rgba(229,229,229,1);
+    height: 14vh;
+    width: 100%;
+    font-size: 18px;
+}
+
+    header img {
+        width: 70%;
+    }
+
+#logoleft {
+    flex-basis: 11%;
+}
+
+
+#header_right {
+    flex-basis: 100%;
+}
+
+#associazione {
+    flex-basis: 20%;
+}
+
+    #associazione a {
+        text-decoration: none;
+        color: rgba(229,229,229,1);
+        text-align: left;
+    }
+
+
+nav {
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+    nav a {
+        color: rgba(229,229,229,1);
+        text-decoration: none;
+        margin: 2%;
+    }
+
+        nav a:hover {
+            background-color: rgba(221,32,32,0.8);
+            border-radius: 20px;
+            padding: 1.5%;
+        }
+
+.descrizioneGiochi {
+    text-align: center;
+    background-color: rgb(214, 115, 115);
+    max-width: 1400px;
+    width: 85%;
+    margin: 0 auto;
+    border: 1px solid var(--dark-grey);
+    padding: 2%;
+    border-radius: 10px;
+    color:#e5e5e5;
+}
+.immagini h3, #immagini h4 {
+    color: rgba(221,32,32, 1);
+}
+.giochiAssociazione {
+
+    padding: 0px;
+    margin: 0px;
+}
+main .title {
+    text-align: center;
+    background-color: #e5e5e5;
+    border-radius:10px;
+    }
+
+.immagini {
+    padding: 0;
+    margin: 0;
+    
+}
+
+    .immagini > li {
+        border: 5px solid #a5a2a2;
+        display: inline-block;
+        width: 40%;
+        height: 40%;
+        margin: 10px;
+        background-color: #e5e5e5;
+        border-radius: 10px;
+        box-shadow: 12px 12px 8px #0d0c0c;
+    }
+.container {
+    
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+#fifa{
+    padding:10px;
+    width:75%;
+}
+#warzone {
+    padding:10px;
+    width: 75%;
+}
+#fortnite {
+    padding: 10px;
+    width: 52%;
+    margin-bottom: 5px;
+}
+#r6 {
+    
+    padding:10px;
+    width: 50%;
+}
+/*footer css*/
+footer {
+    background: rgba(13,12,12);
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+.icone img {
+    width: 40px;
+    height: 40px;
+}
+
+.chiSiamo {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.chiSiamo a {
+    text-decoration: none;
+    color: #fff;
+}
+@media screen and (max-width: 768px){
+    .footer {
+        width: 90%;
+    }
+
+    .icone {
+        height: 100%;
+    }
+}
+
+

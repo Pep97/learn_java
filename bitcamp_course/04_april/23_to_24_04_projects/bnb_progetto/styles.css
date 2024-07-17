@@ -1,0 +1,1021 @@
+:root{
+    --verde-chiaro:  rgba(139, 232, 110, 0.86); /* Vecchio #7EFE2D */
+    --verde-scuro: #44A901;
+    --arancione-chiaro: #FFA000;
+    --arancione-scuro: #FF5F00;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sedan, sans-serif;
+
+}
+
+/* Header e navbar */
+
+header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 0 1rem;
+    top: 0; /* Add this line to position the header at the top */
+
+    .logo{
+
+        margin: 10px;
+        margin-top: 20px;
+
+        display: flex;
+        direction: column;
+
+        img{
+            width: 50px;
+            height: 50px;
+        }
+
+        span{
+            color:white;
+            font-size: 1.5em;
+            margin: 0.5rem;
+        }
+
+    }
+
+        
+   
+
+    nav{
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10px;
+    }
+    
+    ul li {
+        display: inline;
+        margin: 0 0.7rem;
+    }
+    
+    li a {
+        color: var(--verde-chiaro);
+        text-decoration: none;
+    }
+
+    li {
+        padding: 0.5rem;
+    }
+
+    li:hover {
+        background-color: var(--arancione-chiaro);
+        border-radius: 20px;
+
+        a{
+            color: black;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    nav{
+        width: 100%;
+        justify-content: left;
+        height: 100%;
+        margin: 0px;
+        padding: -10px 0;
+        overflow: hidden;
+    
+        ul li {
+            margin: 0 0.5rem;
+        }
+    }
+
+
+
+    
+}
+
+
+
+
+
+/* sezione contattaci */
+
+.contattaci{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 2em 1rem;
+
+    .contatti_informazioni{
+        flex-basis: 50%;
+        width: 100%;
+
+        h2{
+            text-align: center;
+            font-size: 2rem;
+            margin: 2rem 0;
+        
+        }
+    }
+
+    .canali_social{
+        flex-basis: 50%;
+        width: 100%;
+
+        img{
+            margin-right: 10px;
+            width: 45px;
+            height: 45px;
+            border-radius: 5px;
+            cursor: pointer;
+
+            .facebook_logo{
+                width: 54px;
+                height: 54px;
+                
+            }
+    
+            .instagram_logo{
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+ 
+    }
+
+
+
+}
+
+@media screen and (max-width: 690px) {
+    .contattaci {
+        flex-direction: column;
+        height: auto;
+        
+
+        .contatti_informazioni {
+            margin: 30px auto;
+            width: 90%;
+            height: auto;
+        }
+    
+        .canali_social {
+            margin: 30px auto;
+            width: 90%;
+            height: auto;
+        }
+    }
+    
+}
+
+/* Footer */
+
+footer{
+    background-color: black;
+    color: var(--verde-scuro);
+    text-align: center;
+    padding: 0.8em 0;
+    font-size: 1.2rem;
+}
+
+/* pagina contatti */
+
+#contatti{
+     
+    h3 {
+         background-color: var(--verde-chiaro);
+         color: #333;
+         margin-top: 150px;
+         font-size: 30px;
+         width: fit-content;
+         margin-left: auto;
+         margin-right: auto;
+     }
+
+    form{
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 10px;
+    
+        label{
+            display: block;
+            margin-bottom: 8px;
+        }
+    
+        input{
+            width: 97%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            
+    
+    
+        }
+
+        textarea {
+            width: 97%; 
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    
+        button{
+            margin: 20px auto 0 auto;
+            display: block;
+            background-color: var(--arancione-scuro);
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+
+    .elenco_contatti{
+        
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 10px;
+        
+ 
+        
+        
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    #contatti{
+        h3{
+            margin-top: 300px;
+        }
+    }
+    
+}
+
+#prenotazioni{
+
+    /* 
+            body {
+          text-align: center;
+          background: url();
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+     */
+
+     main{
+        margin: 0;
+        padding: 0;
+     }
+
+    div {
+        background-color:rgba(169, 219, 153, 0.86);
+        text-align: center;
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #prenotazioni{
+        div{
+            padding-top: 250px;
+        }
+    }
+    
+}
+
+#recensioni{
+
+    width: 90%;
+    margin-left: 30px;
+
+    div{
+        margin-top: 150px;
+        margin-bottom: 50px;
+    }
+
+    h3{
+        font-size: 1.2rem;
+    }
+    p{
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    #recensioni{
+        h2{
+            margin-top: 300px;
+        }
+    }
+    
+}
+
+/* Galleria fotografica*/
+
+#galleria {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+
+
+   /* Create four equal columns that sits next to each other */
+    .column {
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+        
+    }
+
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+    }
+}
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    #galleria {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    #galleria {
+        flex: 100%;
+        max-width: 100%;
+        margin-top: 300px;
+    }
+}
+
+#camere{
+    
+    margin:0;
+    padding:0;
+
+    .title{
+        font-size: 40px;
+        width:100%;
+        height:100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 150px;
+    }
+
+    .contenitore_camere {
+        background: rgba(222,184,135, 0.5);
+        display:flex;
+        text-align:center;
+        margin-bottom:20px;
+        margin-left:10px;
+        margin-top:20px;
+    }
+
+    .descrizione_camere {
+        margin: 20px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+
+        
+    }
+
+    .camera {
+        text-align: center;
+        width: 100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        font-size:20px;
+    }
+    
+
+
+    a {
+        position:relative;
+        top:20px;
+        text-decoration:none;
+    }
+
+        a:link {
+            color: #b8662B;
+        }
+
+        a:visited {
+            color: #7a4c17;
+        }
+
+        a:hover {
+            background-color: #CE7869;
+            padding: 5px;
+            color: #E5DAB1;
+            border-radius: 5px;
+        }
+
+    .collegamento {
+        text-decoration: none;
+        color: #FF5F00;
+    }
+
+    .titolo {
+        color: #CE7869;
+       
+        
+        
+    }
+
+    h1 {
+        color: #CE7869;
+        text-align:center;
+    }
+}
+
+#camera_abete{
+
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 100px;
+
+    /*Camera Abete carosello*/
+    .slider-container {
+        width: 100%;
+        height: 700px;
+        overflow: hidden;
+        position: relative;
+        animation: 0.4s 0.2s both fadeIn;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        animation: 12s linear infinite sliderAnimation;
+        box-sizing: border-box; /* to keep total width at 100% */
+        display: flex; /* to position the text inside*/
+    }
+
+        .slide:first-of-type {
+            background: no-repeat 50% 20%/cover url('img/img1Abete.jpg');
+            /* positioning for the text inside */
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
+        .slide:nth-of-type(2) {
+            background: no-repeat center/cover url('img/img2Abete.jpg');
+            /* 12s - 9s = 3s... Will start after 3s */
+            animation-delay: -9s;
+        }
+
+        .slide:nth-of-type(3) {
+            background: no-repeat center/cover url('img/img3Abete.jpg');
+            /* 12s - 9s = 3s... Will start after 3s */
+            animation-delay: -6s;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .slide:nth-of-type(4) {
+            background: no-repeat center/cover url('img/img4Abete.jpg');
+            /* 12s - 9s = 3s... Will start after 3s */
+            animation-delay: -3s;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes sliderAnimation {
+            /* 4 slides, 20% in place and 5% transition time = 100% */
+            0% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            /* starts in view */
+            20% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            /* stays in view */
+            25% {
+                transform: translateX(-100%);
+                opacity: 1;
+            }
+            /* slides out left */
+            70% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            /* Doesn't matter at what percent: changes to transparent so can't see it travel back across to the right. */
+            71% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            /* Doesn't matter at what percent: moves off right */
+            95% {
+                transform: translateX(100%);
+                opacity: 1;
+            }
+            /* Becomes transparent and Ready to slide on from the right */
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+        }
+
+    a {
+        position: relative;
+        top: 20px;
+        text-decoration: none;
+        font-size: 30px;
+    }
+
+        a:link {
+            color: #b8662B;
+        }
+
+        a:visited {
+            color: #7a4c17;
+        }
+
+        a:hover {
+            background-color: #CE7869;
+            padding: 5px;
+            color: #E5DAB1;
+            border-radius: 5px;
+        }
+
+    .collegamento {
+        text-decoration: none;
+        color: #FF5F00;
+    }
+
+    .titolo {
+        color: #CE7869;
+    }
+
+    h1 {
+        color: #CE7869;
+    }
+
+
+    h4 {
+        color: #CE7869;
+        
+    }
+
+}
+
+#camera_cedro{
+
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 100px;
+
+    /*Camera Abete carosello*/
+    .slider-container {
+        width: 100%;
+        height: 700px;
+        overflow: hidden;
+        position: relative;
+        animation: 0.4s 0.2s both fadeIn;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        animation: 12s linear infinite sliderAnimation;
+        box-sizing: border-box; /* to keep total width at 100% */
+        display: flex; /* to position the text inside*/
+    }
+
+        .slide:first-of-type {
+            background: no-repeat 50% 20%/cover url('img/img1.png');
+            /* positioning for the text inside */
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
+        .slide:nth-of-type(2) {
+            background: no-repeat center/cover url('img/img2.png');
+            /* 12s - 9s = 3s... Will start after 3s */
+            animation-delay: -9s;
+        }
+
+        .slide:nth-of-type(3) {
+            background: no-repeat center/cover url('img/imgCedro.png');
+            /* 12s - 9s = 3s... Will start after 3s */
+            animation-delay: -6s;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .slide:nth-of-type(4) {
+            background: no-repeat center/cover url('img/img4Abete.jpg');
+            /* 12s - 9s = 3s... Will start after 3s */
+            animation-delay: -3s;
+            justify-content: center;
+            align-items: center;
+        }
+
+    @keyframes sliderAnimation {
+        /* 4 slides, 20% in place and 5% transition time = 100% */
+        0% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        /* starts in view */
+        20% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        /* stays in view */
+        25% {
+            transform: translateX(-100%);
+            opacity: 1;
+        }
+        /* slides out left */
+        70% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        /* Doesn't matter at what percent: changes to transparent so can't see it travel back across to the right. */
+        71% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        /* Doesn't matter at what percent: moves off right */
+        95% {
+            transform: translateX(100%);
+            opacity: 1;
+        }
+        /* Becomes transparent and Ready to slide on from the right */
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+    }
+
+    a {
+        position: relative;
+        top: 20px;
+        text-decoration: none;
+        font-size:30px;
+    }
+
+        a:link {
+            color: #b8662B;
+        }
+
+        a:visited {
+            color: #7a4c17;
+        }
+
+        a:hover {
+            background-color: #CE7869;
+            padding: 5px;
+            color: #E5DAB1;
+            border-radius: 5px;
+        }
+
+    .collegamento {
+        text-decoration: none;
+        color: #FF5F00;
+    }
+
+    .titolo {
+        color: #CE7869;
+    }
+
+    h1 {
+        color: #CE7869;
+    }
+
+
+    h4 {
+        color: #CE7869;
+    }
+}
+
+#camera_ulivo{
+    text-align: center;
+        font-size:20px;
+        margin-bottom: 100px;
+    /*Camera Pino carosello*/
+    .slider-container {
+        width: 100%;
+        height: 700px;
+        overflow: hidden;
+        position: relative;
+        animation: 0.4s 0.2s both fadeIn;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        animation: 12s linear infinite sliderAnimation;
+        box-sizing: border-box; /* to keep total width at 100% */
+        display: flex; /* to position the text inside*/
+    }
+
+        .slide:first-of-type {
+            background: no-repeat 50% 20%/cover url('img/img1Ulivo.jpg');
+            /* positioning for the text inside */
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
+        .slide:nth-of-type(2) {
+            background: no-repeat center/cover url('img/img2Ulivo.jpg');
+            /* 12s - 9s = 3s... Will start after 3s */
+            animation-delay: -9s;
+        }
+
+        .slide:nth-of-type(3) {
+            background: no-repeat center/cover url('img/img3Ulivo.jpg');
+            /* 12s - 9s = 3s... Will start after 3s */
+            animation-delay: -6s;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .slide:nth-of-type(4) {
+            background: no-repeat center/cover url('img/img4Pino.jpg');
+            /* 12s - 9s = 3s... Will start after 3s */
+            animation-delay: -3s;
+            justify-content: center;
+            align-items: center;
+        }
+
+    @keyframes sliderAnimation {
+        /* 4 slides, 20% in place and 5% transition time = 100% */
+        0% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        /* starts in view */
+        20% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        /* stays in view */
+        25% {
+            transform: translateX(-100%);
+            opacity: 1;
+        }
+        /* slides out left */
+        70% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        /* Doesn't matter at what percent: changes to transparent so can't see it travel back across to the right. */
+        71% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        /* Doesn't matter at what percent: moves off right */
+        95% {
+            transform: translateX(100%);
+            opacity: 1;
+        }
+        /* Becomes transparent and Ready to slide on from the right */
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+    }
+
+    a {
+        
+        padding-bottom:10px;
+        text-decoration: none;
+        font-size:30px;
+    }
+
+        a:link {
+            color: #b8662B;
+        }
+
+        a:visited {
+            color: #7a4c17;
+        }
+
+        a:hover {
+            background-color: #CE7869;
+            padding: 5px;
+            color: #E5DAB1;
+            border-radius: 5px;
+        }
+
+    .collegamento {
+        text-decoration: none;
+        color: #FF5F00;
+    }
+
+    .titolo {
+        color: #CE7869;
+    }
+
+    h1 {
+        color: #CE7869;
+    }
+
+    h4 {
+        color: #CE7869;
+    }
+}
+
+#camera_pino{
+
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 100px;
+    /*Camera Pino carosello*/
+    .slider-container {
+        width: 100%;
+        height: 700px;
+        overflow: hidden;
+        position: relative;
+        animation: 0.4s 0.2s both fadeIn;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        animation: 12s linear infinite sliderAnimation;
+        box-sizing: border-box; /* to keep total width at 100% */
+        display: flex; /* to position the text inside*/
+    }
+
+        .slide:first-of-type {
+            background: no-repeat 50% 20%/cover url('img/img1Pino.jpg');
+            /* positioning for the text inside */
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
+        .slide:nth-of-type(2) {
+            background: no-repeat center/cover url('img/img2Pino.jpg');
+            /* 12s - 9s = 3s... Will start after 3s */
+            animation-delay: -9s;
+        }
+
+        .slide:nth-of-type(3) {
+            background: no-repeat center/cover url('img/img3Pino.jpg');
+            /* 12s - 9s = 3s... Will start after 3s */
+            animation-delay: -6s;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .slide:nth-of-type(4) {
+            background: no-repeat center/cover url('img/img4Pino.jpg');
+            /* 12s - 9s = 3s... Will start after 3s */
+            animation-delay: -3s;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+    a {
+        position: relative;
+        top: 20px;
+        text-decoration: none;
+        font-size:30px;
+    }
+
+        a:link {
+            color: #b8662B;
+        }
+
+        a:visited {
+            color: #7a4c17;
+        }
+
+        a:hover {
+            background-color: #CE7869;
+            padding: 5px;
+            color: #E5DAB1;
+            border-radius: 5px;
+        }
+
+    .collegamento {
+        text-decoration: none;
+        color: #FF5F00;
+    }
+
+    .titolo {
+        color: #CE7869;
+    }
+
+    h1 {
+        color: #CE7869;
+    }
+
+    h4 {
+        color: #CE7869;
+    }
+}
+
+@keyframes sliderAnimation {
+    /* 4 slides, 20% in place and 5% transition time = 100% */
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    /* starts in view */
+    20% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    /* stays in view */
+    25% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+    /* slides out left */
+    70% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    /* Doesn't matter at what percent: changes to transparent so can't see it travel back across to the right. */
+    71% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    /* Doesn't matter at what percent: moves off right */
+    95% {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+    /* Becomes transparent and Ready to slide on from the right */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+}
+

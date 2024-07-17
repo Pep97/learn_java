@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://.w3.org/1999/xhtml">
+ <head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prenotazioni Capra & Cavoli">
+  <meta name="keywords" content="bed & breakfast, posti letto Capracotta, Hotel Capracotta">
+  <meta name="author" content="Giuseppe Boinega, Giuseppe Giordano, Roberto book, Claudia Premoselli">
+
+  <link rel="stylesheet" href="styles.css">
+  <title>Prenotazioni</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon_bnb.png">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+
+
+
+ </head>
+ <body>
+
+    <!-- Header con navbar e logo -->
+
+    <header>
+      <div class="logo">
+        <img src="img/favicon_bnb.png" alt="Logo">
+        <span> Capra & Cavoli</span>
+      </div>
+  
+      <nav>
+                  
+              <ul>
+                  <li>
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                    <a href="camere.html">Camere</a>
+                  </li>
+                  <li>
+                    <a href="servizi.html">Servizi</a>
+                  </li>
+                  <li>
+                    <a href="galleria_fotografica.html">Galleria</a>
+                  </li>
+                  <li>
+                    <a href="prenotazioni.html">Prenotazioni</a>
+                  </li>
+                  <li>
+                    <a href="recensioni.html">Recensioni</a>
+                  </li>
+                  <li>
+                    <a href="contatti.html">Contatti</a>
+                  </li>
+                  <li>
+                    <a href="la_nostra_storia.html">La nostra Storia</a>
+                  </li>
+                  <li>
+                    <a href="team.html">Team</a>
+                  </li>
+              </ul>
+  
+        </nav>
+    
+    
+    </header>
+
+
+  <main id="prenotazioni">
+    <div>
+      <h2>
+          <p>Prenota una camera per il tuo soggiorno:</p>
+          <form>
+              <label for="name">Nome Utente:</label>
+              <input type="name" id="nome" name="nome" required />
+              <br/>
+          
+              <label for="number">Numero Ospiti:</label>
+              <input type="number" id="numero" name="numero" required />
+              <br/>
+          
+              <label for="data">Data dell'appuntamento:</label>
+              <input type="date" id="data" name="data" required />
+              <br/>
+      
+              <label for="ora">Orario check-in:</label>
+              <input type="time" id="ora" name="ora" required />
+              <br/> 
+              
+              <label for="ora">Orario check-out</label>
+              <input type="time" id="ora" name="ora" required />
+              <br/>
+
+              <label for="messaggio">Servizi richiesti (facoltativi)</label>
+              <textarea id="messaggio" name="messaggio"></textarea>
+              <br/>
+
+              <p>La nostra dimora offre i seguenti servizi:</p>
+
+              <form action="multiple">
+                <label for="servizi">Servizi Offerti:</label>
+                <select name="servizi" id="servizi" multiple>
+                  <option value="piscina">Piscina</option>
+                  <option value="tracking">Tracking</option>
+                  <option value="tennis">Tennis</option>
+                  <option value="centro spa">Centro Massaggi SPA</option>
+                  <option value="escursione a cavallo">Escursione a cavallo</option>
+                  <option value="palestra">Palestra</option>
+                  <option value="pilates">Pilates</option>
+                  <option value="tour guidato della città">Tour guidato della città</option>
+                  <option value="pacchetto colazione deluxe">Pacchetto Colazione Deluxe</option>
+                </select>
+                <p>*per la scelta di più servizi tenere premuto ctrl mentre si effettua la selezione con il mouse</p>
+
+              </form>
+              
+              <form action="#">
+                <label for="camera">Scegli la tua Camera:</label>
+                <select name="camera" id="camera">
+                  <option value="camera ulivo">Camera Ulivo (singola)</option>
+                  <option value="camera pino">Camera Pino (matrimoniale)</option>
+                  <option value="camera abete">Camera Abete (suite familiare)</option>
+                  <option value="camera cedro">Camera Cedro (vista montagna)</option>
+                
+                <input type="submit" value="Invia" />
+                </select>
+              </form>
+
+          </form>
+           
+      </h2>
+  </div>
+
+  </main>
+
+    <!-- Footer -->
+
+
+  <footer>
+     <p>&copy; 2024 Coffe House. Tutti i diritti sono riservati.</p>
+  </footer>
+   
+ </body>
+ </html>
